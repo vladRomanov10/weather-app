@@ -35,3 +35,10 @@ html {
 *, *::before, *::after {
     box-sizing: inherit;
 }
+
+.content {
+    max-width: 640px;
+    height: 640px;
+    border: 1px solid black;
+    margin: 25px 25px;
+}
