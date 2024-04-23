@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 
 html {
     box-sizing: border-box;
+    font-size: 36px;
 }
 *, *::before, *::after {
     box-sizing: inherit;
@@ -41,4 +42,48 @@ html {
     height: 640px;
     border: 1px solid black;
     margin: 25px 25px;
+}
+
+.search-and-time {
+    display: flex;
+    height: 10%;
+    border-bottom: 1px solid black;
+}
+
+.search {
+    width: 75%;
+    height: 100%;
+    border-right: 1px solid black;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+}
+
+input#search-input {
+    width: 85%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 5%;
+    font-size: 0.8em;
+}
+
+.search-button {
+    margin-top: 1.2%;
+    background: transparent;
+    border: none;
+    position:absolute;
+    cursor: pointer;
+}
+
+.time {
+
 }
