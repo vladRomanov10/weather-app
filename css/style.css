@@ -77,7 +77,6 @@ input#search-input {
 }
 
 .search-button {
-    margin-top: 1.5%;
     background: transparent;
     border: none;
     cursor: pointer;
