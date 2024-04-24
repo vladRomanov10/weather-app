@@ -77,10 +77,9 @@ input#search-input {
 }
 
 .search-button {
-    margin-top: 0.75%;
+    margin-top: 1.5%;
     background: transparent;
     border: none;
-    position:absolute;
     cursor: pointer;
 }
 
@@ -88,3 +87,27 @@ input#search-input {
     margin: auto;
     font-size: 0.9em;
 }
+
+.weather-widget-and-locations {
+    display: flex;
+    height: 90%;
+}
+
+.weather-widget {
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid black;
+}
+
+.locations {
+    width: 50%;
+}
+
+.locations-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    border-bottom: 1px solid black;
+}
+
