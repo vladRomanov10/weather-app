@@ -12,11 +12,20 @@
             <form class="search" action="#">
                 <label class="sr-only" for="search-input">Enter a city</label>
                 <input type="text" id="search-input" placeholder="Enter a city">
-                <button class="search-button" ><img src="images/icon-search.png" alt="Search button"></button>
+                <button class="search-button"><img src="images/icon-search.png" alt="Search button"></button>
             </form>
-            <div class="time"></div>
+            <div class="time">
+                <time id="currentTime">09:04</time>
+            </div>
         </div>
     </div>
 </main>
+<script>
+    const currentTime = document.getElementById('currentTime')
+    const data = new Date()
+    const hour = data.getHours()
+    const minutes = data.getMinutes()
+    currentTime.textContent = `${hour}:${minutes}`
+</script>
 </body>
 </html>
