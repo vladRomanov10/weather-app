@@ -18,14 +18,27 @@
                 <time id="currentTime">09:04</time>
             </div>
         </div>
+        <div class="weather-widget-and-added-locations">
+            <div class = "weather-widget"></div>
+            <div class="added-locations"></div>
+        </div>
     </div>
 </main>
 <script>
     const currentTime = document.getElementById('currentTime')
-    const data = new Date()
-    const hour = data.getHours()
-    const minutes = data.getMinutes()
-    currentTime.textContent = `${hour}:${minutes}`
+    const getCurrentTime = () => {
+        const data = new Date()
+        let hour = data.getHours().toString()
+        let minutes = data.getMinutes().toString()
+        if (hour.length < 2) {
+            hour = '0' + hour
+        }
+        if (minutes.length < 2) {
+            minutes = '0' + minutes
+        }
+        return `${hour}:${minutes}`
+    }
+    currentTime.textContent = getCurrentTime()
 </script>
 </body>
 </html>
