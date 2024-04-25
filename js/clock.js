@@ -1,3 +1,5 @@
+const currentTime = document.getElementById('currentTime')
+
 const getCurrentTime = () => {
 
     const data = new Date()
@@ -14,3 +16,5 @@ const getCurrentTime = () => {
 
     return `${hour}:${minutes}`
 }
+
+currentTime.textContent = getCurrentTime()
