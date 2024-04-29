@@ -29,4 +29,3 @@ form.onsubmit = (event) => {
         .then(response => response.json())
         .then(json => cityWeather = json)
 }
-
