@@ -1,31 +1,30 @@
-// Остановился на том, что реализовал апи так, что бы при загрузке приложения, сразу подгружался город алматы
-// нужно теперь сделать отрисовку температуры, облочков и самого города
-const apiKey = 'ac98d4897b7a49ce89972652242504'
-
 const form = document.getElementById('search-form')
 const input = document.getElementById('search-input')
 
-//При загрузке приложения, нужно отображать дефолтный город в приложении, что бы не было пусто
+const apiKey = 'https://api.weatherapi.com/v1/current.json?key=ac98d4897b7a49ce89972652242504&q='
+const defaultCity = 'Almaty&aqi=yes'
 let cityWeather
 
-const defaultUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=Almaty&aqi=yes`
+//а.ф. для запроса погоды на сервер
+const getCityWeather = async(url) => {
+    const res = await fetch(url)
+    return await res.json()
+}
 
-fetch(defaultUrl)
-    .then(response => response.json())
-    .then(json => cityWeather = json)
+//При загрузке приложения, нужно отображать дефолтный город в приложении, что бы не было пусто
+//Запрос на сервер погоды, для получения дефолтного города, который мы вручную прописали в коде
+getCityWeather(`${apiKey}${defaultCity}`)
+    .then(data => cityWeather = data)
 
-// Подписываемся на форму
+// Подписываемся на форму в нашем приложении, что бы отправить запрос на сервер и получить данные по вписаному городу
 form.onsubmit = (event) => {
     //при нажатии на <button> происходит отправка формы и вследствии обновление страницы
-    //с помощью preventDefault отменяем отправку формы
+    //с помощью preventDefault отменяем отправку формы, что бы не происходило обновление страницы
     event.preventDefault()
     
     //метод trim обрезает пробелы по бокам от вводимого слова
-    let city = input.value.trim()
+    let city = input.value.trim() + '&aqi=yes'
     
-    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=yes`
-
-    fetch(url)
-        .then(response => response.json())
-        .then(json => cityWeather = json)
+    getCityWeather(`${apiKey}${city}`)
+        .then(data => cityWeather = data)
 }
