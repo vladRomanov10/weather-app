@@ -1,5 +1,5 @@
 const currentTime = document.getElementById('currentTime')
-
+//Получаем текущее время
 const getCurrentTime = () => {
 
     const data = new Date()
@@ -19,8 +19,20 @@ const getCurrentTime = () => {
 }
 
 getCurrentTime()
-const setIntervalId = setInterval(getCurrentTime, 1000)
+//Отрисовываем текущее время каждую секунду
+let setIntervalId = setInterval(getCurrentTime, 1000)
+//Проверяем активна ли вкладка в браузере, если нет, отключаем время
+//если пользователь вернулся на вкладку, запускаем время
+//отключение отсчета времени работает, только при первом переходе из вкладки
+//при втором переходе, время продолжает идти, хотя вкладка неактивна
+const isPageVisibility = () => {
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            clearInterval(setIntervalId)
+        } else {
+            setIntervalId = setInterval(getCurrentTime, 1000)
+        }
+    })
+}
 
-window.addEventListener('unload', () => {
-    clearInterval(setIntervalId)
-})
+setInterval(isPageVisibility, 1000)
