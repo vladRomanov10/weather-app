@@ -1,0 +1,112 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 36px;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.content {
+    max-width: 640px;
+    height: 640px;
+    border: 1px solid black;
+    margin: 25px 25px;
+}
+
+.search-and-time {
+    display: flex;
+    height: 10%;
+    border-bottom: 1px solid black;
+}
+
+.search {
+    width: 75%;
+    height: 100%;
+    border-right: 1px solid black;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+}
+
+input#search-input {
+    width: 85%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 5%;
+    font-size: 0.8em;
+}
+
+.search-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.time {
+    margin: auto;
+    font-size: 0.9em;
+}
+
+.weather-widget-and-locations {
+    display: flex;
+    height: 90%;
+}
+
+.weather-widget {
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid black;
+}
+
+.locations {
+    width: 50%;
+}
+
+.locations-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    border-bottom: 1px solid black;
+}
+

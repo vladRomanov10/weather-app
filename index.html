@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Weather</title>
+    <link rel = "stylesheet" type = "text/css" href = "css/style.css">
 </head>
 <body>
+<main>
+    <div class="content">
+        <div class="search-and-time">
+            <form class="search" id="search-form">
+                <label class="sr-only" for="search-input">Enter a city</label>
+                <input type="text" id="search-input" placeholder="Enter a city">
+                <button class="search-button"><img src="assets/images/icon-search.png" alt="Search button"></button>
+            </form>
+            <div class="time">
+                <time id="currentTime"></time>
+            </div>
+        </div>
+        <div class="weather-widget-and-locations">
+            <div class = "weather-widget">
+                <p class="temperature" id="cityTemperature"></p>
+            </div>
+            <div class="locations">
+                <div class="locations-heading">
+                    Added Locations:
+                </div>
+                <div class="city-list">
 
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="js/clock.js"></script>
+<script src="js/weatherApi.js"></script>
 </body>
 </html>
