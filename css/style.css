@@ -37,26 +37,29 @@ html {
     box-sizing: inherit;
 }
 
-.content {
+.main {
+    padding: 25px 25px;
+}
+
+.weather-app {
     max-width: 640px;
     height: 640px;
     border: 1px solid black;
-    margin: 25px 25px;
 }
 
-.search-and-time {
+.weather-app__search-and-time {
     display: flex;
     height: 10%;
     border-bottom: 1px solid black;
 }
 
-.search {
+.weather-app__form {
     width: 75%;
     height: 100%;
     border-right: 1px solid black;
 }
 
-.sr-only {
+.weather-app__label-sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -66,7 +69,7 @@ html {
     border: 0;
 }
 
-input#search-input {
+.weather-app__input {
     width: 85%;
     height: 100%;
     border: none;
@@ -76,33 +79,33 @@ input#search-input {
     font-size: 0.8em;
 }
 
-.search-button {
+.weather-app__button {
     background: transparent;
     border: none;
     cursor: pointer;
 }
 
-.time {
+.weather-app__time {
     margin: auto;
     font-size: 0.9em;
 }
 
-.weather-widget-and-locations {
+.weather-app__widget-and-locations {
     display: flex;
     height: 90%;
 }
 
-.weather-widget {
+.weather-app__widget {
     width: 50%;
     height: 100%;
     border-right: 1px solid black;
 }
 
-.locations {
+.weather-app__locations {
     width: 50%;
 }
 
-.locations-heading {
+.weather-app__locations-title {
     display: flex;
     justify-content: center;
     align-items: center;

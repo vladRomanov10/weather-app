@@ -6,27 +6,27 @@
     <link rel = "stylesheet" type = "text/css" href = "css/style.css">
 </head>
 <body>
-<main>
-    <div class="content">
-        <div class="search-and-time">
-            <form class="search" id="search-form">
-                <label class="sr-only" for="search-input">Enter a city</label>
-                <input type="text" id="search-input" placeholder="Enter a city">
-                <button class="search-button"><img src="assets/images/icon-search.png" alt="Search button"></button>
+<main class = "main">
+    <div class="weather-app">
+        <div class="weather-app__search-and-time">
+            <form class="weather-app__form" id="search-form">
+                <label class="weather-app__label-sr-only" for="search-input">Enter a city</label>
+                <input class="weather-app__input" type="text" id="search-input" placeholder="Enter a city">
+                <button class="weather-app__button"><img src="assets/images/icon-search.png" alt="Search button"></button>
             </form>
-            <div class="time">
+            <div class="weather-app__time">
                 <time id="currentTime"></time>
             </div>
         </div>
-        <div class="weather-widget-and-locations">
-            <div class = "weather-widget">
-                <p class="temperature" id="cityTemperature"></p>
+        <div class="weather-app__widget-and-locations">
+            <div class = "weather-app__widget">
+                <p class="weather-app__temperature" id="cityTemperature"></p>
             </div>
-            <div class="locations">
-                <div class="locations-heading">
+            <div class="weather-app__locations">
+                <div class="weather-app__locations-title">
                     Added Locations:
                 </div>
-                <div class="city-list">
+                <div class="weather-app__cities-list">
 
                 </div>
             </div>
