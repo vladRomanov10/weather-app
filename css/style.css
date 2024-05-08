@@ -41,25 +41,24 @@ html {
     padding: 25px 25px;
 }
 
-.weather-app {
+.weather-app-wrap {
     max-width: 640px;
     height: 640px;
-    border: 1px solid black;
+    outline: 1px solid black;
 }
 
-.weather-app__search-and-time {
+.search-and-time {
     display: flex;
-    height: 10%;
-    border-bottom: 1px solid black;
+    min-height: 65px;
+    outline: 1px solid black;
 }
 
-.weather-app__form {
+.search-and-time__form {
     width: 75%;
-    height: 100%;
     border-right: 1px solid black;
 }
 
-.weather-app__label-sr-only {
+.search-and-time__label-sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -69,7 +68,7 @@ html {
     border: 0;
 }
 
-.weather-app__input {
+.search-and-time__input {
     width: 85%;
     height: 100%;
     border: none;
@@ -79,15 +78,16 @@ html {
     font-size: 0.8em;
 }
 
-.weather-app__button {
+.search-and-time__button {
     background: transparent;
     border: none;
     cursor: pointer;
 }
 
-.weather-app__time {
+.search-and-time__time {
     margin: auto;
     font-size: 0.9em;
+
 }
 
 .weather-app__widget-and-locations {
