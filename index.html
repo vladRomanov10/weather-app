@@ -7,30 +7,28 @@
 </head>
 <body>
 <main class = "main">
-    <div class="weather-app-wrap">
-        <div class="search-and-time">
-            <form class="search-and-time__form" id="search-form">
-                <label class="search-and-time__label-sr-only" for="search-input">Enter a city</label>
-                <input class="search-and-time__input" type="text" id="search-input" placeholder="Enter a city">
-                <button class="search-and-time__button"><img src="assets/images/icon-search.png" alt="Search button"></button>
-            </form>
-            <div class="search-and-time__time">
-                <time id="currentTime"></time>
-            </div>
+    <div class="search-and-time">
+        <form class="search-and-time__form" id="search-form">
+            <label class="search-and-time__label-sr-only" for="search-input">Enter a city</label>
+            <input class="search-and-time__input" type="text" id="search-input" placeholder="Enter a city">
+            <button class="search-and-time__button"><img src="assets/images/icon-search.png" alt="Search button"></button>
+        </form>
+        <div class="search-and-time__time">
+            <time id="currentTime"></time>
         </div>
-<!--        <div class="weather-app__widget-and-locations">-->
-        <div class = "weather-app__widget">
-            <p class="weather-app__temperature" id="cityTemperature"></p>
+    </div>
+    <div class="widget-and-locations-wrap">
+        <div class = "widget">
+            <p class="widget__temperature" id="cityTemperature"></p>
         </div>
-        <div class="weather-app__locations">
-            <div class="weather-app__locations-title">
+        <div class="locations">
+            <div class="locations__title">
                 Added Locations:
             </div>
-            <div class="weather-app__cities-list">
+            <div class="locations__cities-list">
 
             </div>
         </div>
-<!--        </div>-->
     </div>
 </main>
 <script src="js/clock.js"></script>

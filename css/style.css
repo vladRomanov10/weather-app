@@ -39,19 +39,18 @@ html {
 
 .main {
     padding: 25px 25px;
-    white-space: nowrap
 }
 
-.weather-app-wrap {
-    max-width: 640px;
-    height: 640px;
-    outline: 1px solid black;
-}
+/*.weather-app-wrap {*/
+/*    max-width: 640px;*/
+/*    height: 640px;*/
+/*}*/
 
 .search-and-time {
     display: flex;
-    min-height: 65px;
-    outline: 1px solid black;
+    height: 65px;
+    max-width: 640px;
+    border: 1px solid black;
 }
 
 .search-and-time__form {
@@ -91,28 +90,27 @@ html {
 
 }
 
-/*.weather-app__widget-and-locations {*/
-/*    display: flex;*/
-/*    height: 90%;*/
-/*}*/
-/*остановился на том, что нужно обернуть в обертку виджет и локации, потому что между инлайн блоками есть базовый пробел и убирается он только с помощью костылей*/
-.weather-app__widget {
-    display: inline-block;
-    vertical-align: top;
-    min-width: 320px;
-    min-height:  575px;
-    outline: 1px solid black;
+.widget-and-locations-wrap {
+    display: flex;
+    max-width: 640px;
 }
 
-.weather-app__locations {
-    display: inline-block;
-    vertical-align: top;
-    min-width: 320px;
-    min-height:  575px;
-    outline: 1px solid black;
+.widget {
+    width: 320px;
+    height: 575px;
+    border: 1px solid black;
 }
 
-.weather-app__locations-title {
+.locations {
+    width: 320px;
+    height: 575px;
+    border: 1px solid black;
+}
+
+.locations__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 20%;
+    border-bottom: 1px solid black;
 }
-
