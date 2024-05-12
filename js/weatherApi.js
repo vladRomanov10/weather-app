@@ -11,7 +11,10 @@ const defaultCity = 'Almaty&aqi=yes'
 //а.ф. для запроса погоды на сервер
 const getCityWeather = async(url) => {
     const res = await fetch(url)
-    return await res.json()
+    const data = await res.json()
+    //для удобстава разработки вывожу объект с погодой в консоль
+    console.log(data)
+    return data
 }
 
 //При загрузке приложения, нужно отображать дефолтный город в приложении, что бы не было пусто
