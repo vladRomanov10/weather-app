@@ -41,11 +41,6 @@ html {
     padding: 25px 25px;
 }
 
-/*.weather-app-wrap {*/
-/*    max-width: 640px;*/
-/*    height: 640px;*/
-/*}*/
-
 .search-and-time {
     display: flex;
     height: 65px;
@@ -53,7 +48,12 @@ html {
     border: 1px solid black;
 }
 
+.search-and-time_transparent-button-border {
+    border-bottom: none;
+}
+
 .search-and-time__form {
+    display: flex;
     width: 75%;
     border-right: 1px solid black;
 }
@@ -78,10 +78,15 @@ html {
     font-size: 0.8em;
 }
 
-.search-and-time__button {
+.button {
     background: transparent;
     border: none;
     cursor: pointer;
+}
+
+.search-and-time__search-icon {
+    width: 32px;
+    height: 32px;
 }
 
 .search-and-time__time {
@@ -99,6 +104,78 @@ html {
     width: 320px;
     height: 575px;
     border: 1px solid black;
+}
+
+.widget_transparent-right-border {
+    border-right: none;
+}
+
+.widget__temperature-wrap {
+    display: flex;
+}
+
+.widget__temperature {
+    font-size: 2.5em;
+    padding-left: 7%;
+    padding-top: 7%;
+}
+
+.widget__degree-symbol {
+    font-size: 1.5em;
+    font-weight: 900;
+    align-self: center;
+}
+
+.widget__condition {
+    margin: 10% 0 5%;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.widget__condition-icon {
+    display: block;
+    margin: 0 auto;
+    height: 170px;
+}
+
+.widget__city-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 17% 7% 10%;
+    text-align: center;
+}
+
+.widget__city {
+
+}
+
+.widget__add-city {
+    height: 32px;
+    width: 32px;
+}
+
+.widget__tab {
+    display: flex;
+}
+
+.widget__item {
+    flex: 1;
+    font-size: 0.70em;
+    text-align: center;
+    list-style: none;
+    border: 1px solid black;
+    border-right: none;
+    border-bottom: none;
+    padding: 3% 0;
+}
+
+.widget__item:first-child {
+    border-left: none;
+}
+
+.widget__item_active {
+    color: white;
+    background-color: black;
 }
 
 .locations {

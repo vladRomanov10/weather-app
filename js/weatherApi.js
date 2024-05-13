@@ -3,6 +3,7 @@ const input = document.getElementById('search-input')
 const temp = document.getElementById('cityTemperature')
 const condition = document.getElementById('condition')
 const city = document.getElementById('city')
+const conditionIcon = document.getElementById('condition-icon')
 
 const apiKey = 'https://api.weatherapi.com/v1/current.json?key=ac98d4897b7a49ce89972652242504&q='
 const defaultCity = 'Almaty&aqi=yes'
@@ -24,6 +25,7 @@ getCityWeather(`${apiKey}${defaultCity}`)
         temp.innerHTML = `${data.current.temp_c}`
         condition.innerHTML = `${data.current.condition.text}`
         city.innerHTML = `${data.location.name}`
+        conditionIcon.src = `https:${data.current.condition.icon}`
     })
 
 // Подписываемся на форму в нашем приложении, что бы отправить запрос на сервер и получить данные по вписаному городу
@@ -42,6 +44,7 @@ form.onsubmit = (event) => {
             temp.innerHTML = `${data.current.temp_c}`
             condition.innerHTML = `${data.current.condition.text}`
             city.innerHTML = `${data.location.name}`
+            conditionIcon.src = `https:${data.current.condition.icon}`
         })
         .catch(error => alert('Some error occurred, please try again'))
 }

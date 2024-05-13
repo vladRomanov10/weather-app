@@ -7,23 +7,33 @@
 </head>
 <body>
 <main class = "main">
-    <div class="search-and-time">
+    <div class="search-and-time search-and-time_transparent-button-border">
         <form class="search-and-time__form" id="search-form">
             <label class="search-and-time__label-sr-only" for="search-input">Enter a city</label>
             <input class="search-and-time__input" type="text" id="search-input" placeholder="Enter a city">
-            <button class="search-and-time__button"><img src="assets/images/icon-search.png" alt="Search button"></button>
+            <button class="button"><img class="search-and-time__search-icon" src="assets/images/icon-search.png" alt="Search button"></button>
         </form>
         <div class="search-and-time__time">
             <time id="currentTime"></time>
         </div>
     </div>
     <div class="widget-and-locations-wrap">
-        <div class = "widget">
-            <p class="widget__temperature" id="cityTemperature"></p>
+        <div class = "widget widget_transparent-right-border">
+            <div class="widget__temperature-wrap">
+                <p class="widget__temperature" id="cityTemperature"></p>
+                <p class="widget__degree-symbol">°</p>
+            </div>
             <p class="widget__condition" id="condition"></p>
-            <img src="" alt="">
-            <p class="widget__city" id="city"></p>
-            <img class="widget__add-city" src="" alt="">
+            <img class="widget__condition-icon" id="condition-icon" src="" alt="">
+            <div class="widget__city-wrap">
+                <p class="widget__city" id="city"></p>
+                <button class="button"><img class="widget__add-city" src="assets/images/like.png" alt=""></button>
+            </div>
+            <ul class="widget__tab">
+                <li class="widget__item widget__item_active">Now</li>
+                <li class="widget__item">Details</li>
+                <li class="widget__item">Forecast</li>
+            </ul>
         </div>
         <div class="locations">
             <div class="locations__title">
