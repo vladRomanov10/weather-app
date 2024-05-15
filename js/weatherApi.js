@@ -10,7 +10,7 @@ const defaultCity = 'Almaty&aqi=yes'
 
 
 //а.ф. для запроса погоды на сервер
-const getCityWeather = async(url) => {
+const getData = async(url) => {
     const res = await fetch(url)
     const data = await res.json()
     //для удобстава разработки вывожу объект с погодой в консоль
@@ -18,15 +18,17 @@ const getCityWeather = async(url) => {
     return data
 }
 
+const displayData = (data) => {
+    temp.innerHTML = `${data.current.temp_c}`
+    condition.innerHTML = `${data.current.condition.text}`
+    city.innerHTML = `${data.location.name}`
+    conditionIcon.src = `https:${data.current.condition.icon}`
+}
+
 //При загрузке приложения, нужно отображать дефолтный город в приложении, что бы не было пусто
 //Запрос на сервер погоды, для получения дефолтного города, который мы вручную прописали в коде
-getCityWeather(`${apiKey}${defaultCity}`)
-    .then((data) => {
-        temp.innerHTML = `${data.current.temp_c}`
-        condition.innerHTML = `${data.current.condition.text}`
-        city.innerHTML = `${data.location.name}`
-        conditionIcon.src = `https:${data.current.condition.icon}`
-    })
+getData(`${apiKey}${defaultCity}`)
+    .then(data => displayData(data))
 
 // Подписываемся на форму в нашем приложении, что бы отправить запрос на сервер и получить данные по вписаному городу
 form.onsubmit = (event) => {
@@ -38,13 +40,7 @@ form.onsubmit = (event) => {
     let inputValue = input.value.trim() + '&aqi=yes'
     // Чистим поле ввода
     input.value = ''
-    
-    getCityWeather(`${apiKey}${inputValue}`)
-        .then((data) => {
-            temp.innerHTML = `${data.current.temp_c}`
-            condition.innerHTML = `${data.current.condition.text}`
-            city.innerHTML = `${data.location.name}`
-            conditionIcon.src = `https:${data.current.condition.icon}`
-        })
-        .catch(error => alert('Some error occurred, please try again'))
+
+    getData(`${apiKey}${inputValue}`)
+        .then(data => displayData(data))
 }

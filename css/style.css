@@ -38,7 +38,7 @@ html {
 }
 
 .main {
-    padding: 25px 25px;
+    padding: 25px;
 }
 
 .search-and-time {
@@ -48,7 +48,7 @@ html {
     border: 1px solid black;
 }
 
-.search-and-time_transparent-button-border {
+.transparent-button-border {
     border-bottom: none;
 }
 
@@ -106,7 +106,7 @@ html {
     border: 1px solid black;
 }
 
-.widget_transparent-right-border {
+.transparent-right-border {
     border-right: none;
 }
 
@@ -116,8 +116,8 @@ html {
 
 .widget__temperature {
     font-size: 2.5em;
-    padding-left: 7%;
-    padding-top: 7%;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 .widget__degree-symbol {
@@ -127,7 +127,7 @@ html {
 }
 
 .widget__condition {
-    margin: 10% 0 5%;
+    margin: 32px 0 16px;
     text-align: center;
     font-size: 1.3em;
 }
@@ -141,7 +141,7 @@ html {
 .widget__city-wrap {
     display: flex;
     justify-content: space-between;
-    margin: 17% 7% 10%;
+    margin: 53px 25px 35px;
     text-align: center;
 }
 
@@ -166,16 +166,16 @@ html {
     border: 1px solid black;
     border-right: none;
     border-bottom: none;
-    padding: 3% 0;
-}
-
-.widget__item:first-child {
-    border-left: none;
+    padding: 10px 0;
 }
 
 .widget__item_active {
     color: white;
     background-color: black;
+}
+
+.transparent-left-border {
+    border-left: none;
 }
 
 .locations {

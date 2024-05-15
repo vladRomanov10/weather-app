@@ -7,7 +7,7 @@
 </head>
 <body>
 <main class = "main">
-    <div class="search-and-time search-and-time_transparent-button-border">
+    <div class="search-and-time transparent-button-border">
         <form class="search-and-time__form" id="search-form">
             <label class="search-and-time__label-sr-only" for="search-input">Enter a city</label>
             <input class="search-and-time__input" type="text" id="search-input" placeholder="Enter a city">
@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="widget-and-locations-wrap">
-        <div class = "widget widget_transparent-right-border">
+        <div class = "widget transparent-right-border">
             <div class="widget__temperature-wrap">
                 <p class="widget__temperature" id="cityTemperature"></p>
                 <p class="widget__degree-symbol">°</p>
@@ -30,7 +30,7 @@
                 <button class="button"><img class="widget__add-city" src="assets/images/like.png" alt=""></button>
             </div>
             <ul class="widget__tab">
-                <li class="widget__item widget__item_active">Now</li>
+                <li class="widget__item widget__item_active transparent-left-border" >Now</li>
                 <li class="widget__item">Details</li>
                 <li class="widget__item">Forecast</li>
             </ul>
@@ -47,6 +47,5 @@
 </main>
 <script src="js/clock.js"></script>
 <script src="js/weatherApi.js"></script>
-<script src="js/widget.js"></script>
 </body>
 </html>
