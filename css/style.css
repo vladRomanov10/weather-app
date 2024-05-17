@@ -97,7 +97,7 @@ html {
 
 .widget-and-locations-wrap {
     display: flex;
-    max-width: 640px;
+    min-width: 640px;
 }
 
 .widget {
@@ -190,4 +190,8 @@ html {
     justify-content: center;
     height: 20%;
     border-bottom: 1px solid black;
+}
+
+.locations__selected-cities {
+    border: none;
 }

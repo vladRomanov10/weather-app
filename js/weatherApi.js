@@ -6,7 +6,7 @@ const city = document.getElementById('city')
 const conditionIcon = document.getElementById('condition-icon')
 
 const apiKey = 'https://api.weatherapi.com/v1/current.json?key=ac98d4897b7a49ce89972652242504&q='
-const defaultCity = 'Almaty&aqi=yes'
+const defaultCity = 'Almaty'
 
 
 //а.ф. для запроса погоды на сервер
@@ -17,12 +17,13 @@ const getData = async(url) => {
     console.log(data)
     return data
 }
-
+// Функция для отображения данных с сервера на странице
 const displayData = (data) => {
     temp.innerHTML = `${data.current.temp_c}`
     condition.innerHTML = `${data.current.condition.text}`
     city.innerHTML = `${data.location.name}`
     conditionIcon.src = `https:${data.current.condition.icon}`
+    currentCity = data.location.name
 }
 
 //При загрузке приложения, нужно отображать дефолтный город в приложении, что бы не было пусто
@@ -37,7 +38,7 @@ form.onsubmit = (event) => {
     event.preventDefault()
     
     //метод trim обрезает пробелы по бокам от вводимого слова
-    let inputValue = input.value.trim() + '&aqi=yes'
+    let inputValue = input.value.trim()
     // Чистим поле ввода
     input.value = ''
 

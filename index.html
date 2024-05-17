@@ -27,7 +27,7 @@
             <img class="widget__condition-icon" id="condition-icon" src="" alt="">
             <div class="widget__city-wrap">
                 <p class="widget__city" id="city"></p>
-                <button class="button"><img class="widget__add-city" src="assets/images/like.png" alt=""></button>
+                <button class="button" id="like-button"><img class="widget__add-city" src="assets/images/like.png" alt=""></button>
             </div>
             <ul class="widget__tab">
                 <li class="widget__item widget__item_active transparent-left-border" >Now</li>
@@ -39,13 +39,14 @@
             <div class="locations__title">
                 Added Locations:
             </div>
-            <div class="locations__cities-list">
-
+            <div class="locations__selected-cities-wrap">
+                <select class="locations__selected-cities" size="10" id="selected-cities"></select>
             </div>
         </div>
     </div>
 </main>
 <script src="js/clock.js"></script>
+<script src="js/savedLocations.js"></script>
 <script src="js/weatherApi.js"></script>
 </body>
 </html>
