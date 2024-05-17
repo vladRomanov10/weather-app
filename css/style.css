@@ -37,26 +37,28 @@ html {
     box-sizing: inherit;
 }
 
-.content {
-    max-width: 640px;
-    height: 640px;
-    border: 1px solid black;
-    margin: 25px 25px;
+.main {
+    padding: 25px;
 }
 
 .search-and-time {
     display: flex;
-    height: 10%;
-    border-bottom: 1px solid black;
+    height: 65px;
+    max-width: 640px;
+    border: 1px solid black;
 }
 
-.search {
+.transparent-button-border {
+    border-bottom: none;
+}
+
+.search-and-time__form {
+    display: flex;
     width: 75%;
-    height: 100%;
     border-right: 1px solid black;
 }
 
-.sr-only {
+.search-and-time__label-sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -66,7 +68,7 @@ html {
     border: 0;
 }
 
-input#search-input {
+.search-and-time__input {
     width: 85%;
     height: 100%;
     border: none;
@@ -76,37 +78,116 @@ input#search-input {
     font-size: 0.8em;
 }
 
-.search-button {
+.button {
     background: transparent;
     border: none;
     cursor: pointer;
 }
 
-.time {
+.search-and-time__search-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.search-and-time__time {
     margin: auto;
     font-size: 0.9em;
+
 }
 
-.weather-widget-and-locations {
+.widget-and-locations-wrap {
     display: flex;
-    height: 90%;
+    max-width: 640px;
 }
 
-.weather-widget {
-    width: 50%;
-    height: 100%;
-    border-right: 1px solid black;
+.widget {
+    width: 320px;
+    height: 575px;
+    border: 1px solid black;
+}
+
+.transparent-right-border {
+    border-right: none;
+}
+
+.widget__temperature-wrap {
+    display: flex;
+}
+
+.widget__temperature {
+    font-size: 2.5em;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.widget__degree-symbol {
+    font-size: 1.5em;
+    font-weight: 900;
+    align-self: center;
+}
+
+.widget__condition {
+    margin: 32px 0 16px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.widget__condition-icon {
+    display: block;
+    margin: 0 auto;
+    height: 170px;
+}
+
+.widget__city-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 53px 25px 35px;
+    text-align: center;
+}
+
+.widget__city {
+
+}
+
+.widget__add-city {
+    height: 32px;
+    width: 32px;
+}
+
+.widget__tab {
+    display: flex;
+}
+
+.widget__item {
+    flex: 1;
+    font-size: 0.70em;
+    text-align: center;
+    list-style: none;
+    border: 1px solid black;
+    border-right: none;
+    border-bottom: none;
+    padding: 10px 0;
+}
+
+.widget__item_active {
+    color: white;
+    background-color: black;
+}
+
+.transparent-left-border {
+    border-left: none;
 }
 
 .locations {
-    width: 50%;
+    width: 320px;
+    height: 575px;
+    border: 1px solid black;
 }
 
-.locations-heading {
+.locations__title {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: 20%;
     border-bottom: 1px solid black;
 }
-

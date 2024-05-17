@@ -18,7 +18,7 @@ const getCurrentTime = () => {
     if(seconds.length < 2) {
         seconds = '0' + seconds
     }
-    document.getElementById('currentTime').innerHTML = `${hour}:${minutes}:${seconds}`
+    currentTime.innerHTML = `${hour}:${minutes}:${seconds}`
 }
 
 getCurrentTime()
