@@ -24,12 +24,5 @@ const getCurrentTime = () => {
 getCurrentTime()
 //Отрисовываем текущее время каждую секунду
 let setIntervalId = setInterval(getCurrentTime, 1000)
-//Останавливаем время, когда пользователь уходит из вкладки и возобновляем, когда приходит
-document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-        clearInterval(setIntervalId)
-    } else {
-        setIntervalId = setInterval(getCurrentTime, 1000)
-    }
-})
+
 

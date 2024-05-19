@@ -4,26 +4,33 @@ const likeButton = document.getElementById('like-button')
 //В данную переменную записывается запрашиваемый город, при выполнении функции displayData
 let currentCity
 
-//Слушатель кнопки в избранное
-likeButton.addEventListener('click', () => {
+//Добавление города в список сохраненных городов
+const addCity = () => {
+    
     // создаем новый элемент option
     const newOption = document.createElement('option')
-    
+
     //прописываем в этот option текущий город
     newOption.value = `${currentCity}`
     newOption.text = `${currentCity}`
-    
+    newOption.className = 'locations__item-city'
+
     // добовляем в элемент select нового ребенка option со значением текущего города
-    citySelect.appendChild(newOption)}
-)
+    citySelect.appendChild(newOption)
+}
 
+//отображение погоды города из списка сохранненых городов
+const displayCityFromList = () => {
 
-//Слушатель списка добавленных городов
-citySelect.addEventListener('change', (event) => {
-    
     //Сохраняем в переменную значение активного option
     const selectedValue = event.target.value
-    
+
     getData(`${apiKey}${selectedValue}`)
         .then(data => displayData(data))
-})
+}
+
+// //Слушатель кнопки в избранное
+likeButton.addEventListener('click', addCity)
+
+//Слушатель списка добавленных городов
+citySelect.addEventListener('change', displayCityFromList)
