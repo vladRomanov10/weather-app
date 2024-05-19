@@ -181,6 +181,8 @@ html {
 }
 
 .locations {
+    display: flex;
+    flex-direction: column;
     width: 320px;
     height: 575px;
     border: 1px solid black;
