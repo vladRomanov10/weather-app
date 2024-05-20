@@ -103,9 +103,14 @@ html {
 .widget {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 320px;
-    height: 575px;
+    max-height: 575px;
     border: 1px solid black;
+}
+
+.hidden {
+    display: none;
 }
 
 .transparent-right-border {
@@ -156,11 +161,11 @@ html {
     width: 32px;
 }
 
-.widget__tab {
+.widget__tabs {
     display: flex;
 }
 
-.widget__item {
+.widget__tabs-nav {
     flex: 1;
     font-size: 0.70em;
     text-align: center;
@@ -171,7 +176,7 @@ html {
     padding: 10px 0;
 }
 
-.widget__item_active {
+.widget__tabs_active {
     color: white;
     background-color: black;
 }

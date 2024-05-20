@@ -19,21 +19,30 @@
     </div>
     <div class="widget-and-locations-wrap">
         <div class = "widget transparent-right-border">
-            <div class="widget__temperature-wrap">
-                <p class="widget__temperature" id="cityTemperature"></p>
-                <p class="widget__degree-symbol">°</p>
+            <div class="widget__content">
+                <div class="widget__temperature-wrap">
+                    <p class="widget__temperature" id="cityTemperature"></p>
+                    <p class="widget__degree-symbol">°</p>
+                </div>
+                <p class="widget__condition" id="condition"></p>
+                <img class="widget__condition-icon" id="condition-icon" src="" alt="">
+                <div class="widget__city-wrap">
+                    <p class="widget__city"></p>
+                    <button class="button" id="like-button"><img class="widget__add-city" src="assets/images/like.png" alt=""></button>
+                </div>
             </div>
-            <p class="widget__condition" id="condition"></p>
-            <img class="widget__condition-icon" id="condition-icon" src="" alt="">
-            <div class="widget__city-wrap">
-                <p class="widget__city" id="city"></p>
-                <button class="button" id="like-button"><img class="widget__add-city" src="assets/images/like.png" alt=""></button>
+            <div class="widget__content hidden">
+                <p class="widget__city"></p>
+                Temperature: <p class="widget__temperature">10</p>
             </div>
-            <ul class="widget__tab">
-                <li class="widget__item widget__item_active transparent-left-border" >Now</li>
-                <li class="widget__item">Details</li>
-                <li class="widget__item">Forecast</li>
+            <div class="widget__content hidden">
+            </div>
+            <ul class="widget__tabs">
+                <li class="widget__tabs-nav widget__tabs_active transparent-left-border">Now</li>
+                <li class="widget__tabs-nav">Details</li>
+                <li class="widget__tabs-nav">Forecast</li>
             </ul>
+
         </div>
         <div class="locations">
             <div class="locations__title">
