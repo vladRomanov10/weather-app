@@ -17,6 +17,12 @@ const addCity = () => {
 
     // добовляем в элемент select нового ребенка option со значением текущего города
     citySelect.appendChild(newOption)
+    
+    //добавляем сохраненный город в массив для localStorage
+    addedLocations.push(currentCity)
+    
+    //Сохраняем в localStorage массив городов
+    localStorage.setItem('addedLocations', JSON.stringify(addedLocations))
 }
 
 //отображение погоды города из списка сохранненых городов
