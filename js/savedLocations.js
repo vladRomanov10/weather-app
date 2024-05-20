@@ -5,21 +5,21 @@ const likeButton = document.getElementById('like-button')
 let currentCity
 
 //Добавление города в список сохраненных городов
-const addCity = () => {
+const addCity = (city) => {
     
     // создаем новый элемент option
     const newOption = document.createElement('option')
 
     //прописываем в этот option текущий город
-    newOption.value = `${currentCity}`
-    newOption.text = `${currentCity}`
+    newOption.value = city
+    newOption.text = city
     newOption.className = 'locations__item-city'
 
     // добовляем в элемент select нового ребенка option со значением текущего города
     citySelect.appendChild(newOption)
     
-    //добавляем сохраненный город в массив для localStorage
-    addedLocations.push(currentCity)
+    //добавляем сохраненный город в массив, где хранятся сохраненные города
+    addedLocations.push(city)
     
     //Сохраняем в localStorage массив городов
     localStorage.setItem('addedLocations', JSON.stringify(addedLocations))
@@ -36,7 +36,7 @@ const displayCityFromList = () => {
 }
 
 // //Слушатель кнопки в избранное
-likeButton.addEventListener('click', addCity)
+likeButton.addEventListener('click', event => addCity(currentCity))
 
 //Слушатель списка добавленных городов
 citySelect.addEventListener('change', displayCityFromList)
