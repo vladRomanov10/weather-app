@@ -1,9 +1,12 @@
 const form = document.getElementById('search-form')
 const input = document.getElementById('search-input')
-const temp = document.getElementById('cityTemperature')
-const condition = document.getElementById('condition')
+const temp = document.querySelectorAll('[data-id="cityTemp"]')
+const condition = document.querySelectorAll('[data-id="condition"]')
 const city = document.querySelectorAll('[data-id="cityName"]')
 const conditionIcon = document.getElementById('condition-icon')
+const feelsLike = document.getElementById('feelsLike')
+const humidity = document.getElementById('humidity')
+const wind = document.getElementById('wind')
 
 const apiKey = 'https://api.weatherapi.com/v1/current.json?key=ac98d4897b7a49ce89972652242504&q='
 const defaultCity = 'Almaty'
@@ -19,16 +22,30 @@ const getData = async(url) => {
 }
 // Функция для отображения данных с сервера на странице
 const displayData = (data) => {
-    temp.innerHTML = `${data.current.temp_c}`
-    condition.innerHTML = `${data.current.condition.text}`
     
-    //У меня есть несколько элементов на странице, где нужно отображать одно и тоже (название города). В переменную
-    //city я сохранил все эти элементы в виде nodeList. И далее прошелся с помощью forEach по этим элементам и отрисо-
-    //вал их
+    //У меня есть несколько элементов на странице, где нужно отображать одно и тоже (название города, температуру и тд.). 
+    //В переменную temp я сохранил все элементы, через которые нужно отображать температуру в виде nodeList. И далее 
+    // прошелся с помощью forEach по этим элементам и отрисовал их
+    temp.forEach((el) => {
+        el.innerHTML = `${data.current.temp_c}`
+    })
+    
+    condition.forEach((el) => {
+        el.innerHTML = `${data.current.condition.text}`
+    })
+    
     city.forEach((el) => {
         el.innerHTML = `${data.location.name}`
     })
+    
     conditionIcon.src = `https:${data.current.condition.icon}`
+    
+    feelsLike.innerHTML = `${data.current.feelslike_c}`
+    
+    humidity.innerHTML = `${data.current.humidity}`
+    
+    wind.innerHTML = `${data.current.wind_kph}`
+    
     currentCity = data.location.name
 }
 

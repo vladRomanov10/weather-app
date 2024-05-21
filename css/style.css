@@ -163,9 +163,14 @@ html {
 
 .tab-details {
     padding: 20px 0 0 20px;
-    font-size: 0.9em;
+    font-size: 0.75em;
+    line-height: 1.5em;
 }
 
+.tab-details__flex-wrap {
+    display: flex;
+    column-gap: 10px;
+}
 
 .tab-details__city {
     font-size: 1.2em;

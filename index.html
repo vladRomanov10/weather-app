@@ -21,10 +21,10 @@
         <div class = "widget transparent-right-border">
             <div class="tab-now transparent-border hidden">
                 <div class="flex-container">
-                    <p class="tab-now__temperature" id="cityTemperature"></p>
+                    <p class="tab-now__temperature" data-id="cityTemp"></p>
                     <p class="tab-now__degree-symbol">°</p>
                 </div>
-                <p class="tab-now__condition" id="condition"></p>
+                <p class="tab-now__condition" data-id="condition"></p>
                 <img class="tab-now__condition-icon" id="condition-icon" src="" alt="">
                 <div class="tab-now__city-wrap">
                     <p class="tab-now__city" data-id="cityName"></p>
@@ -33,20 +33,24 @@
             </div>
             <div class="tab-details">
                 <p class="tab-details__city" data-id="cityName"></p>
-                <div class="flex-container">
-                    <p>Temperature:</p><p class="tab-details__temperature" data-id="cityTemp">10</p>
+                <div class="tab-details__flex-wrap">
+                    <p class="tab-details__temperature">Temperature:</p>
+                    <div class="flex-container">
+                        <p class="tab-details__temperature" data-id="cityTemp"></p>
+                        <p class="tab-details__degree-symbol">°</p>
+                    </div>
                 </div>
-                <div class="flex-container">
-                    <p>Feels like:</p><p class="tab-details__feels-like"></p>
+                <div class="tab-details__flex-wrap">
+                    <p>Feels like:</p><p class="tab-details__feels-like" id="feelsLike"></p>
                 </div>
-                <div class="flex-container">
-                    <p>Weather:</p><p class="tab-details__weather"></p>
+                <div class="tab-details__flex-wrap">
+                    <p>Weather:</p><p class="tab-details__weather" data-id="condition"></p>
                 </div>
-                <div class="flex-container">
-                    <p>Sunrise:</p><p class="tab-details__sunrise"></p>
+                <div class="tab-details__flex-wrap">
+                    <p>Humidity:</p><p class="tab-details__humidity" id="humidity"></p>
                 </div>
-                <div class="flex-container">
-                    <p>Sunset:</p><p class="tab-details__sunset"></p>
+                <div class="tab-details__flex-wrap">
+                    <p>Wind:</p><p class="tab-details__wind" id="wind"></p>
                 </div>
 
             </div>
