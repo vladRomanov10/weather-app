@@ -41,6 +41,10 @@ html {
     padding: 25px;
 }
 
+.flex-container {
+    display: flex;
+}
+
 .search-and-time {
     display: flex;
     height: 65px;
@@ -95,11 +99,6 @@ html {
 
 }
 
-.widget-and-locations-wrap {
-    display: flex;
-    min-width: 640px;
-}
-
 .widget {
     display: flex;
     flex-direction: column;
@@ -109,9 +108,6 @@ html {
     border: 1px solid black;
 }
 
-.hidden {
-    display: none;
-}
 
 .transparent-right-border {
     border-right: none;
@@ -123,10 +119,6 @@ html {
     max-width: 320px;
     max-height: 525px;
     border: 1px solid black;
-}
-
-.tab-now__temperature-wrap {
-    display: flex;
 }
 
 .tab-now__temperature {
@@ -167,6 +159,17 @@ html {
 .tab-now__add-city {
     height: 32px;
     width: 32px;
+}
+
+.tab-details {
+    padding: 20px 0 0 20px;
+    font-size: 0.9em;
+}
+
+
+.tab-details__city {
+    font-size: 1.2em;
+    margin-bottom: 15px;
 }
 
 .tabs {
@@ -225,4 +228,8 @@ html {
 
 .transparent-border {
     border: none;
+}
+
+.hidden {
+    display: none;
 }

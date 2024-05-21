@@ -17,10 +17,10 @@
             <time id="currentTime"></time>
         </div>
     </div>
-    <div class="widget-and-locations-wrap">
+    <div class="flex-container">
         <div class = "widget transparent-right-border">
-            <div class="tab-now transparent-border">
-                <div class="tab-now__temperature-wrap">
+            <div class="tab-now transparent-border hidden">
+                <div class="flex-container">
                     <p class="tab-now__temperature" id="cityTemperature"></p>
                     <p class="tab-now__degree-symbol">°</p>
                 </div>
@@ -31,13 +31,24 @@
                     <button class="button" id="like-button"><img class="tab-now__add-city" src="assets/images/like.png" alt=""></button>
                 </div>
             </div>
-            <div class="tab-details hidden">
+            <div class="tab-details">
                 <p class="tab-details__city" data-id="cityName"></p>
-                <p>Temperature:</p><p class="tab-details__temperature" data-id="cityTemp">10</p>
-                <p>Feels like:</p><p class="tab-details__feels-like"></p>
-                <p>Weather:</p><p class="tab-details__weather"></p>
-                <p>Sunrise:</p><p class="tab-details__sunrise"></p>
-                <p>Sunset:</p><p class="tab-details__sunset"></p>
+                <div class="flex-container">
+                    <p>Temperature:</p><p class="tab-details__temperature" data-id="cityTemp">10</p>
+                </div>
+                <div class="flex-container">
+                    <p>Feels like:</p><p class="tab-details__feels-like"></p>
+                </div>
+                <div class="flex-container">
+                    <p>Weather:</p><p class="tab-details__weather"></p>
+                </div>
+                <div class="flex-container">
+                    <p>Sunrise:</p><p class="tab-details__sunrise"></p>
+                </div>
+                <div class="flex-container">
+                    <p>Sunset:</p><p class="tab-details__sunset"></p>
+                </div>
+
             </div>
             <div class="tab-forecast hidden">
             </div>
