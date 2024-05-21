@@ -19,28 +19,32 @@
     </div>
     <div class="widget-and-locations-wrap">
         <div class = "widget transparent-right-border">
-            <div class="widget__content">
-                <div class="widget__temperature-wrap">
-                    <p class="widget__temperature" id="cityTemperature"></p>
-                    <p class="widget__degree-symbol">°</p>
+            <div class="tab-now transparent-border">
+                <div class="tab-now__temperature-wrap">
+                    <p class="tab-now__temperature" id="cityTemperature"></p>
+                    <p class="tab-now__degree-symbol">°</p>
                 </div>
-                <p class="widget__condition" id="condition"></p>
-                <img class="widget__condition-icon" id="condition-icon" src="" alt="">
-                <div class="widget__city-wrap">
-                    <p class="widget__city"></p>
-                    <button class="button" id="like-button"><img class="widget__add-city" src="assets/images/like.png" alt=""></button>
+                <p class="tab-now__condition" id="condition"></p>
+                <img class="tab-now__condition-icon" id="condition-icon" src="" alt="">
+                <div class="tab-now__city-wrap">
+                    <p class="tab-now__city" data-id="cityName"></p>
+                    <button class="button" id="like-button"><img class="tab-now__add-city" src="assets/images/like.png" alt=""></button>
                 </div>
             </div>
-            <div class="widget__content hidden">
-                <p class="widget__city"></p>
-                Temperature: <p class="widget__temperature">10</p>
+            <div class="tab-details hidden">
+                <p class="tab-details__city" data-id="cityName"></p>
+                <p>Temperature:</p><p class="tab-details__temperature" data-id="cityTemp">10</p>
+                <p>Feels like:</p><p class="tab-details__feels-like"></p>
+                <p>Weather:</p><p class="tab-details__weather"></p>
+                <p>Sunrise:</p><p class="tab-details__sunrise"></p>
+                <p>Sunset:</p><p class="tab-details__sunset"></p>
             </div>
-            <div class="widget__content hidden">
+            <div class="tab-forecast hidden">
             </div>
-            <ul class="widget__tabs">
-                <li class="widget__tabs-nav widget__tabs_active transparent-left-border">Now</li>
-                <li class="widget__tabs-nav">Details</li>
-                <li class="widget__tabs-nav">Forecast</li>
+            <ul class="tabs">
+                <li class="tabs__item widget__tabs_active transparent-left-border">Now</li>
+                <li class="tabs__item">Details</li>
+                <li class="tabs__item">Forecast</li>
             </ul>
 
         </div>

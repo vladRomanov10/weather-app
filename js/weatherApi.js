@@ -2,7 +2,7 @@ const form = document.getElementById('search-form')
 const input = document.getElementById('search-input')
 const temp = document.getElementById('cityTemperature')
 const condition = document.getElementById('condition')
-const city = document.getElementsByClassName('widget__city')
+const city = document.querySelectorAll('[data-id="cityName"]')
 const conditionIcon = document.getElementById('condition-icon')
 
 const apiKey = 'https://api.weatherapi.com/v1/current.json?key=ac98d4897b7a49ce89972652242504&q='
@@ -23,9 +23,9 @@ const displayData = (data) => {
     condition.innerHTML = `${data.current.condition.text}`
     
     //У меня есть несколько элементов на странице, где нужно отображать одно и тоже (название города). В переменную
-    //city я сохранил все эти элементы в виде htmlCollection. Что бы пройтись по этой колекции методом forEach, 
-    //я htmlCollection перевел в массив и уже после этого прошелся по каждому элементу с помощью foreach и отрисовал его
-    Array.from(city).forEach((el) => {
+    //city я сохранил все эти элементы в виде nodeList. И далее прошелся с помощью forEach по этим элементам и отрисо-
+    //вал их
+    city.forEach((el) => {
         el.innerHTML = `${data.location.name}`
     })
     conditionIcon.src = `https:${data.current.condition.icon}`
