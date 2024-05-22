@@ -41,7 +41,11 @@
                     </div>
                 </div>
                 <div class="tab-details__flex-wrap">
-                    <p>Feels like:</p><p class="tab-details__feels-like" id="feelsLike"></p>
+                    <p>Feels like:</p>
+                    <div class="flex-container">
+                        <p class="tab-details__feels-like" id="feelsLike"></p>
+                        <p class="tab-details__degree-symbol">°</p>
+                    </div>
                 </div>
                 <div class="tab-details__flex-wrap">
                     <p>Weather:</p><p class="tab-details__weather" data-id="condition"></p>
@@ -74,9 +78,9 @@
     </div>
 </main>
 <script src="js/clock.js"></script>
+<script src="js/deletionListeners.js"></script>
 <script src="js/savedLocations.js"></script>
 <script src="js/weatherApi.js"></script>
 <script src="js/localStorage.js"></script>
-<script src="js/deletionListeners.js"></script>
 </body>
 </html>

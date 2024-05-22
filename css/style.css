@@ -170,6 +170,7 @@ html {
 .tab-details__flex-wrap {
     display: flex;
     column-gap: 10px;
+    flex-wrap: wrap;
 }
 
 .tab-details__city {
@@ -224,7 +225,6 @@ html {
     width: 100%;
     height: 458px;
     padding: 10px 0 0 10px;
-    outline: none;
 }
 
 .locations__item-city {

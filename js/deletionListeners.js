@@ -1,11 +1,13 @@
-document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-        clearInterval(setIntervalId)
-        LIKE_BUTTON.removeEventListener('click', CLICK_HANDLER)
-        CITIES_SELECT.removeEventListener('change', DISPLAY_CITY_FROM_LIST)
-    } else {
-        setIntervalId = setInterval(GET_CURRENT_TIME, 1000)
-        CITIES_SELECT.addEventListener('change', DISPLAY_CITY_FROM_LIST)
-        LIKE_BUTTON.addEventListener('click', CLICK_HANDLER)
-    }
-})
+const delListeners = () => {
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            clearInterval(setIntervalId)
+            likeButton.removeEventListener('click', clickHandler)
+            citiesSelect.removeEventListener('change', displayCityFromList)
+        } else {
+            setIntervalId = setInterval(getCurrentTime, 1000)
+            citiesSelect.addEventListener('change', displayCityFromList)
+            likeButton.addEventListener('click', clickHandler)
+        }
+    })
+}

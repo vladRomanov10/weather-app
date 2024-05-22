@@ -1,15 +1,15 @@
 //Массив, в который будем сохранять добавленные города
-const ADDED_LOCATIONS = []
+const addedLocations = []
 
 //Получение строки из localStorage
-const LOCAL_STORAGE_DATA = localStorage.getItem('addedLocations')
+const localStorageData = localStorage.getItem('addedLocations')
 
 //Преобразование строки в массив
-const ADDED_LOCATIONS_ARRAY = JSON.parse(LOCAL_STORAGE_DATA)
+const addedLocationsArray = JSON.parse(localStorageData)
 
 //Добавляем города из массива в список сохраненных городов
 
-if (ADDED_LOCATIONS_ARRAY !== null) {
+if (addedLocationsArray !== null) {
     
-    ADDED_LOCATIONS_ARRAY.forEach(el => ADD_CITY(el))
+    addedLocationsArray.forEach(el => addCity(el))
 }
