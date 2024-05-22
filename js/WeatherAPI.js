@@ -8,7 +8,7 @@ const feelsLike = document.getElementById('feelsLike')
 const humidity = document.getElementById('humidity')
 const wind = document.getElementById('wind')
 
-const CURRENT_API_KEY = 'https://api.weatherapi.com/v1/forecast.json?key=ac98d4897b7a49ce89972652242504&q='
+const API_KEY = 'https://api.weatherapi.com/v1/forecast.json?key=ac98d4897b7a49ce89972652242504&q='
 const DEFAULT_CITY = 'Almaty'
 
 
@@ -51,7 +51,7 @@ const displayData = (data) => {
 
 //При загрузке приложения, нужно отображать дефолтный город в приложении, что бы не было пусто
 //Запрос на сервер погоды, для получения дефолтного города, который мы вручную прописали в коде
-getData(`${CURRENT_API_KEY}${DEFAULT_CITY}`)
+getData(`${API_KEY}${DEFAULT_CITY}`)
     .then(data => displayData(data))
     .catch(err => alert('Sorry, something went wrong. Please try again'))
 
@@ -66,7 +66,7 @@ form.onsubmit = (event) => {
     // Чистим поле ввода
     input.value = ''
 
-    getData(`${CURRENT_API_KEY}${inputValue}`)
+    getData(`${API_KEY}${inputValue}`)
         .then(data => displayData(data))
         .catch(err => alert('Sorry, something went wrong. Please try again'))
 }
