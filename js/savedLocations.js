@@ -34,8 +34,9 @@ const displayCityFromList = () => {
     //Сохраняем в переменную значение активного option
     const selectedValue = event.target.value
 
-    getData(`${API_KEY}${selectedValue}`)
+    getData(`${CURRENT_API_KEY}${selectedValue}`)
         .then(data => displayData(data))
+        .catch(err => alert('Sorry, something went wrong. Please try again'))
 }
 
 

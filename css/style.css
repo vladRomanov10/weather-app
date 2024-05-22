@@ -178,6 +178,24 @@ html {
     margin-bottom: 15px;
 }
 
+.tab-details__percent {
+    margin-left: -8px;
+}
+
+.tab-details__w-speed {
+    margin-left: -5px;
+}
+
+.tab-forecast {
+    padding: 20px 0 0 20px;;
+}
+
+.forecast-widget {
+    height: 125px;
+    width: 280px;
+    border: 1px solid black;
+}
+
 .tabs {
     display: flex;
 }
