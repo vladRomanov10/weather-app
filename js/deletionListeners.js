@@ -1,11 +1,11 @@
 document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
         clearInterval(setIntervalId)
-        likeButton.removeEventListener('click', addCity)
-        citySelect.removeEventListener('change', displayCityFromList)
+        LIKE_BUTTON.removeEventListener('click', CLICK_HANDLER)
+        CITIES_SELECT.removeEventListener('change', DISPLAY_CITY_FROM_LIST)
     } else {
-        setIntervalId = setInterval(getCurrentTime, 1000)
-        likeButton.addEventListener('click', addCity)
-        citySelect.addEventListener('change', displayCityFromList)
+        setIntervalId = setInterval(GET_CURRENT_TIME, 1000)
+        CITIES_SELECT.addEventListener('change', DISPLAY_CITY_FROM_LIST)
+        LIKE_BUTTON.addEventListener('click', CLICK_HANDLER)
     }
 })

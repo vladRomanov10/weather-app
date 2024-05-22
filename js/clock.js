@@ -1,6 +1,6 @@
-const currentTime = document.getElementById('currentTime')
+const CURRENT_TIME = document.getElementById('currentTime')
 //Получаем текущее время
-const getCurrentTime = () => {
+const GET_CURRENT_TIME = () => {
 
     const data = new Date()
     let hour = data.getHours().toString()
@@ -18,11 +18,11 @@ const getCurrentTime = () => {
     if(seconds.length < 2) {
         seconds = '0' + seconds
     }
-    currentTime.innerHTML = `${hour}:${minutes}:${seconds}`
+    CURRENT_TIME.innerHTML = `${hour}:${minutes}:${seconds}`
 }
 
-getCurrentTime()
+GET_CURRENT_TIME()
 //Отрисовываем текущее время каждую секунду
-let setIntervalId = setInterval(getCurrentTime, 1000)
+let setIntervalId = setInterval(GET_CURRENT_TIME, 1000)
 
 

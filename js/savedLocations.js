@@ -1,11 +1,11 @@
-const citySelect = document.getElementById('selected-cities')
-const likeButton = document.getElementById('like-button')
+const CITIES_SELECT = document.getElementById('selected-cities')
+const LIKE_BUTTON = document.getElementById('like-button')
 
 //В данную переменную записывается запрашиваемый город, при выполнении функции displayData
 let currentCity
 
 //Добавление города в список сохраненных городов
-const addCity = (city) => {
+const ADD_CITY = (city) => {
     
     // создаем новый элемент option
     const newOption = document.createElement('option')
@@ -16,27 +16,30 @@ const addCity = (city) => {
     newOption.className = 'locations__item-city'
 
     // добовляем в элемент select нового ребенка option со значением текущего города
-    citySelect.appendChild(newOption)
+    CITIES_SELECT.appendChild(newOption)
     
     //добавляем сохраненный город в массив, где хранятся сохраненные города
-    addedLocations.push(city)
+    ADDED_LOCATIONS.push(city)
     
     //Сохраняем в localStorage массив городов
-    localStorage.setItem('addedLocations', JSON.stringify(addedLocations))
+    localStorage.setItem('addedLocations', JSON.stringify(ADDED_LOCATIONS))
 }
 
+//оборачиваем функцию для добавления в обработчик событий
+const CLICK_HANDLER = () => ADD_CITY(currentCity)
 //отображение погоды города из списка сохранненых городов
-const displayCityFromList = () => {
+const DISPLAY_CITY_FROM_LIST = () => {
 
     //Сохраняем в переменную значение активного option
     const selectedValue = event.target.value
 
-    getData(`${apiKey}${selectedValue}`)
-        .then(data => displayData(data))
+    GET_DATA(`${API_KEY}${selectedValue}`)
+        .then(data => DISPLAY_DATA(data))
 }
 
+
 // //Слушатель кнопки в избранное
-likeButton.addEventListener('click', event => addCity(currentCity))
+LIKE_BUTTON.addEventListener('click', CLICK_HANDLER)
 
 //Слушатель списка добавленных городов
-citySelect.addEventListener('change', displayCityFromList)
+CITIES_SELECT.addEventListener('change', DISPLAY_CITY_FROM_LIST)
