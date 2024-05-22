@@ -17,35 +17,70 @@
             <time id="currentTime"></time>
         </div>
     </div>
-    <div class="widget-and-locations-wrap">
+    <div class="flex-container">
         <div class = "widget transparent-right-border">
-            <div class="widget__temperature-wrap">
-                <p class="widget__temperature" id="cityTemperature"></p>
-                <p class="widget__degree-symbol">°</p>
+            <div class="tab-now transparent-border">
+                <div class="flex-container">
+                    <p class="tab-now__temperature" data-id="cityTemp"></p>
+                    <p class="tab-now__degree-symbol">°</p>
+                </div>
+                <p class="tab-now__condition" data-id="condition"></p>
+                <img class="tab-now__condition-icon" id="condition-icon" src="" alt="">
+                <div class="tab-now__city-wrap">
+                    <p class="tab-now__city" data-id="cityName"></p>
+                    <button class="button" id="like-button"><img class="tab-now__add-city" src="assets/images/like.png" alt=""></button>
+                </div>
             </div>
-            <p class="widget__condition" id="condition"></p>
-            <img class="widget__condition-icon" id="condition-icon" src="" alt="">
-            <div class="widget__city-wrap">
-                <p class="widget__city" id="city"></p>
-                <button class="button"><img class="widget__add-city" src="assets/images/like.png" alt=""></button>
+            <div class="tab-details hide">
+                <p class="tab-details__city" data-id="cityName"></p>
+                <div class="tab-details__flex-wrap">
+                    <p class="tab-details__temperature">Temperature:</p>
+                    <div class="flex-container">
+                        <p class="tab-details__temperature" data-id="cityTemp"></p>
+                        <p class="tab-details__degree-symbol">°</p>
+                    </div>
+                </div>
+                <div class="tab-details__flex-wrap">
+                    <p>Feels like:</p>
+                    <div class="flex-container">
+                        <p class="tab-details__feels-like" id="feelsLike"></p>
+                        <p class="tab-details__degree-symbol">°</p>
+                    </div>
+                </div>
+                <div class="tab-details__flex-wrap">
+                    <p>Weather:</p><p class="tab-details__weather" data-id="condition"></p>
+                </div>
+                <div class="tab-details__flex-wrap">
+                    <p>Humidity:</p><p class="tab-details__humidity" id="humidity"></p>
+                </div>
+                <div class="tab-details__flex-wrap">
+                    <p>Wind:</p><p class="tab-details__wind" id="wind"></p>
+                </div>
+
             </div>
-            <ul class="widget__tab">
-                <li class="widget__item widget__item_active transparent-left-border" >Now</li>
-                <li class="widget__item">Details</li>
-                <li class="widget__item">Forecast</li>
+            <div class="tab-forecast hide">
+            </div>
+            <ul class="tabs">
+                <li class="tabs__item widget__tabs_active transparent-left-border">Now</li>
+                <li class="tabs__item">Details</li>
+                <li class="tabs__item">Forecast</li>
             </ul>
+
         </div>
         <div class="locations">
             <div class="locations__title">
                 Added Locations:
             </div>
-            <div class="locations__cities-list">
-
+            <div class="locations__favourite-cities-wrap">
+                <select class="locations__favourite-cities transparent-border" size="9" id="selected-cities"></select>
             </div>
         </div>
     </div>
 </main>
 <script src="js/clock.js"></script>
+<script src="js/deletionListeners.js"></script>
+<script src="js/savedLocations.js"></script>
 <script src="js/weatherApi.js"></script>
+<script src="js/localStorage.js"></script>
 </body>
 </html>
