@@ -195,12 +195,49 @@ html {
 
 .tab-forecast {
     padding: 20px 0 0 20px;
+    overflow: scroll;
+}
+
+.tab-forecast__city {
+    margin-bottom: 15px;
+}
+
+.tab-forecast__widgets-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .forecast-widget {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
     height: 125px;
     width: 280px;
     border: 1px solid black;
+    font-size: 0.55em;
+}
+
+.forecast-widget__info1 >:nth-child(2) {
+    margin-bottom: 15px;
+}
+
+.forecast-widget__flex-wrap {
+    display: flex;
+}
+
+.forecast-widget__flex-wrap :first-child {
+    margin-right: 2px;
+}
+
+.forecast-widget__date {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.forecast-widget__time {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
 .tabs {
