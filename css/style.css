@@ -169,13 +169,38 @@ html {
 
 .tab-details__flex-wrap {
     display: flex;
-    column-gap: 10px;
     flex-wrap: wrap;
+}
+
+.tab-details__flex-wrap >:first-child {
+    margin-right: 10px;
+}
+
+.tab-details__flex-wrap :nth-child(2) {
+    margin-right: 2px;
 }
 
 .tab-details__city {
     font-size: 1.2em;
     margin-bottom: 15px;
+}
+
+.tab-details__percent {
+
+}
+
+.tab-details__w-speed {
+
+}
+
+.tab-forecast {
+    padding: 20px 0 0 20px;
+}
+
+.forecast-widget {
+    height: 125px;
+    width: 280px;
+    border: 1px solid black;
 }
 
 .tabs {
