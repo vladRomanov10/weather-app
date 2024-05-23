@@ -169,8 +169,15 @@ html {
 
 .tab-details__flex-wrap {
     display: flex;
-    column-gap: 10px;
     flex-wrap: wrap;
+}
+
+.tab-details__flex-wrap >:first-child {
+    margin-right: 10px;
+}
+
+.tab-details__flex-wrap :nth-child(2) {
+    margin-right: 2px;
 }
 
 .tab-details__city {
@@ -179,15 +186,15 @@ html {
 }
 
 .tab-details__percent {
-    margin-left: -8px;
+
 }
 
 .tab-details__w-speed {
-    margin-left: -5px;
+
 }
 
 .tab-forecast {
-    padding: 20px 0 0 20px;;
+    padding: 20px 0 0 20px;
 }
 
 .forecast-widget {
