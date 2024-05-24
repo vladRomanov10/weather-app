@@ -25,7 +25,7 @@
                     <p class="tab-now__degree-symbol">°</p>
                 </div>
                 <p class="tab-now__condition" data-id="condition"></p>
-                <img class="tab-now__condition-icon" id="condition-icon" src="" alt="">
+                <img class="tab-now__condition-icon" data-id="conditionIcon" src="" alt="">
                 <div class="tab-now__city-wrap">
                     <p class="tab-now__city" data-id="cityName"></p>
                     <button class="button" id="like-button"><img class="tab-now__add-city" src="assets/images/like.png" alt=""></button>
@@ -43,7 +43,7 @@
                 <div class="tab-details__flex-wrap">
                     <p>Feels like:</p>
                     <div class="flex-container">
-                        <p class="tab-details__feels-like" id="feelsLike"></p>
+                        <p class="tab-details__feels-like" data-id="feelsLike"></p>
                         <p class="tab-details__degree-symbol">°</p>
                     </div>
                 </div>
@@ -67,7 +67,27 @@
                 <div class="tab-forecast__widgets-wrap">
                     <div class="forecast-widget">
                         <div class="forecast-widget__date-temp">
-                            <p class="forecast-widget__date">23 May</p>
+                            <p class="forecast-widget__date" data-id="day"></p>
+                            <div class="forecast-widget__flex-wrap">
+                                <p class="forecast-widget__temperature">Temperature:</p>
+                                <p class="forecast-widget__temperature" data-id="cityTemp"></p>
+                                <p class="forecast-widget__degree-symbol">°</p>
+                            </div>
+                            <div class="forecast-widget__flex-wrap">
+                                <p class="forecast-widget__feels-like" >Feels like:</p>
+                                <p class="forecast-widget__feels-like" data-id="feelsLike"></p>
+                                <p class="forecast-widget__degree-symbol">°</p>
+                            </div>
+                        </div>
+                        <div class="forecast-widget__time-cond">
+                            <p class="forecast-widget__time">12:00</p>
+                            <p class="forecast-widget__condition" data-id="condition"></p>
+                            <img class="forecast-widget__icon" data-id="conditionIcon" src="" alt="">
+                        </div>
+                    </div>
+                    <div class="forecast-widget">
+                        <div class="forecast-widget__date-temp">
+                            <p class="forecast-widget__date" data-id="day"></p>
                             <div class="forecast-widget__flex-wrap">
                                 <p class="forecast-widget__temperature">Temperature:</p>
                                 <p class="forecast-widget__temperature">15.6</p>
@@ -87,7 +107,7 @@
                     </div>
                     <div class="forecast-widget">
                         <div class="forecast-widget__date-temp">
-                            <p class="forecast-widget__date">23 May</p>
+                            <p class="forecast-widget__date" data-id="day"></p>
                             <div class="forecast-widget__flex-wrap">
                                 <p class="forecast-widget__temperature">Temperature:</p>
                                 <p class="forecast-widget__temperature">15.6</p>
@@ -107,27 +127,7 @@
                     </div>
                     <div class="forecast-widget">
                         <div class="forecast-widget__date-temp">
-                            <p class="forecast-widget__date">23 May</p>
-                            <div class="forecast-widget__flex-wrap">
-                                <p class="forecast-widget__temperature">Temperature:</p>
-                                <p class="forecast-widget__temperature">15.6</p>
-                                <p class="forecast-widget__degree-symbol">°</p>
-                            </div>
-                            <div class="forecast-widget__flex-wrap">
-                                <p class="forecast-widget__feels-like">Feels like:</p>
-                                <p class="forecast-widget__feels-like">15.6</p>
-                                <p class="forecast-widget__degree-symbol">°</p>
-                            </div>
-                        </div>
-                        <div class="forecast-widget__time-cond">
-                            <p class="forecast-widget__time">12:00</p>
-                            <p class="forecast-widget__condition">party cloudy</p>
-                            <img class="forecast-widget__icon" src="" alt="">
-                        </div>
-                    </div>
-                    <div class="forecast-widget">
-                        <div class="forecast-widget__date-temp">
-                            <p class="forecast-widget__date">23 May</p>
+                            <p class="forecast-widget__date" data-id="day"></p>
                             <div class="forecast-widget__flex-wrap">
                                 <p class="forecast-widget__temperature">Temperature:</p>
                                 <p class="forecast-widget__temperature">15.6</p>
@@ -168,7 +168,8 @@
 <script src="js/clock.js"></script>
 <script src="js/deletionListeners.js"></script>
 <script src="js/savedLocations.js"></script>
-<script src="js/WeatherAPI.js"></script>
+<script src="js/weatherAPI.js"></script>
+<script src="js/forecast.js"></script>
 <script src="js/localStorage.js"></script>
 </body>
 </html>

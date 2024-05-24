@@ -235,9 +235,24 @@ html {
     margin-bottom: 10px;
 }
 
+.forecast-widget__time-cond {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
 .forecast-widget__time {
     font-size: 1.2em;
     margin-bottom: 10px;
+}
+
+.forecast-widget__condition {
+    overflow-y: scroll;
+}
+
+.forecast-widget__icon {
+    margin-left: auto;
+    width: 48px;
 }
 
 .tabs {
