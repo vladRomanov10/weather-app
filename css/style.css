@@ -194,8 +194,8 @@ html {
 }
 
 .tab-forecast {
-    padding: 20px 0 0 20px;
-    overflow: scroll;
+    padding: 20px 0 0 12px;
+    overflow-y: scroll;
 }
 
 .tab-forecast__city {
@@ -211,15 +211,15 @@ html {
 .forecast-widget {
     display: flex;
     justify-content: space-between;
-    padding: 7px;
+    padding: 8px;
     height: 125px;
     width: 280px;
     border: 1px solid black;
-    font-size: 0.55em;
+    font-size: 0.5em;
 }
 
-.forecast-widget__info1 >:nth-child(2) {
-    margin-bottom: 15px;
+.forecast-widget__date-temp >:nth-child(2) {
+    margin-bottom: 16px;
 }
 
 .forecast-widget__flex-wrap {
