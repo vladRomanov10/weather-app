@@ -3,10 +3,11 @@ const input = document.getElementById('search-input')
 const temp = document.querySelectorAll('[data-id="cityTemp"]')
 const condition = document.querySelectorAll('[data-id="condition"]')
 const city = document.querySelectorAll('[data-id="cityName"]')
-const conditionIcon = document.getElementById('condition-icon')
-const feelsLike = document.getElementById('feelsLike')
+const conditionIcon = document.querySelectorAll('[data-id="conditionIcon"]')
+const feelsLike = document.querySelectorAll('[data-id="feelsLike"]')
 const humidity = document.getElementById('humidity')
 const wind = document.getElementById('wind')
+const day = document.querySelectorAll('[data-id="day"]')
 
 const API_KEY = 'https://api.weatherapi.com/v1/forecast.json?key=ac98d4897b7a49ce89972652242504&q='
 const DEFAULT_CITY = 'Almaty'
@@ -38,13 +39,25 @@ const displayData = (data) => {
         el.innerHTML = `${data.location.name}`
     })
 
-    conditionIcon.src = `https:${data.current.condition.icon}`
+    conditionIcon.forEach((el) => {
+        el.src = `https:${data.current.condition.icon}`
+    })
 
-    feelsLike.innerHTML = `${data.current.feelslike_c}`
+    feelsLike.forEach((el) => {
+        el.innerHTML = `${data.current.feelslike_c}`
+    })
 
     humidity.innerHTML = `${data.current.humidity}`
 
     wind.innerHTML = `${data.current.wind_kph}`
+    
+    //Получаем дату запрашиваемого города
+    const localData = new Date(data.location.localtime)
+    
+    //Отрисовываем дату(число) и название месяца
+    day.forEach((el) => {
+        el.innerHTML = `${localData.getDate()} ${localData.toLocaleString('default', {month: 'long'})}`
+    })
     
     currentCity = data.location.name
 }
