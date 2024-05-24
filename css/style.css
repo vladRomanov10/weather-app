@@ -194,13 +194,50 @@ html {
 }
 
 .tab-forecast {
-    padding: 20px 0 0 20px;
+    padding: 20px 0 0 12px;
+    overflow-y: scroll;
+}
+
+.tab-forecast__city {
+    margin-bottom: 15px;
+}
+
+.tab-forecast__widgets-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .forecast-widget {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
     height: 125px;
     width: 280px;
     border: 1px solid black;
+    font-size: 0.5em;
+}
+
+.forecast-widget__date-temp >:nth-child(2) {
+    margin-bottom: 16px;
+}
+
+.forecast-widget__flex-wrap {
+    display: flex;
+}
+
+.forecast-widget__flex-wrap :first-child {
+    margin-right: 2px;
+}
+
+.forecast-widget__date {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.forecast-widget__time {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
 .tabs {
