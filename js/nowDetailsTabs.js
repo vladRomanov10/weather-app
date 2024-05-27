@@ -2,12 +2,15 @@ const temp = document.querySelectorAll('[data-id="cityTemp"]')
 const condition = document.querySelectorAll('[data-id="condition"]')
 const city = document.querySelectorAll('[data-id="cityName"]')
 const conditionIcon = document.querySelectorAll('[data-id="conditionIcon"]')
+const feelsLike = document.querySelectorAll('[data-id="feelsLike"]')
+const humidity = document.getElementById('humidity')
+const wind = document.getElementById('wind')
 
 const API_KEY = 'https://api.weatherapi.com/v1/forecast.json?key=ac98d4897b7a49ce89972652242504&q='
 const DEFAULT_CITY = 'Almaty'
 
-//Функция для отображения погоды на вкладке Now
-const displayNowTab = (data) => {
+//Функция для отображения погоды на табах now и details
+const displayNowDetailsTabs = (data) => {
 
     //У меня есть несколько элементов на странице, где нужно отображать одно и тоже (название города, температуру и тд.). 
     //В переменную temp я сохранил все элементы, через которые нужно отображать температуру в виде nodeList. И далее 

@@ -1,7 +1,7 @@
 const citiesSelect = document.getElementById('selected-cities')
 const likeButton = document.getElementById('like-button')
 
-//В данную переменную записывается запрашиваемый город, при выполнении функции displayData
+//В данную переменную записывается запрашиваемый город, при выполнении функции displayNowTab
 let currentCity
 
 //Добавление города в список сохраненных городов
