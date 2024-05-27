@@ -1,13 +1,17 @@
+//search form
 const form = document.getElementById('search-form')
 const input = document.getElementById('search-input')
+
+//tab-now
 const temp = document.querySelectorAll('[data-id="cityTemp"]')
 const condition = document.querySelectorAll('[data-id="condition"]')
 const city = document.querySelectorAll('[data-id="cityName"]')
 const conditionIcon = document.querySelectorAll('[data-id="conditionIcon"]')
+
+//tab-details
 const feelsLike = document.querySelectorAll('[data-id="feelsLike"]')
 const humidity = document.getElementById('humidity')
 const wind = document.getElementById('wind')
-const day = document.querySelectorAll('[data-id="day"]')
 
 const API_KEY = 'https://api.weatherapi.com/v1/forecast.json?key=ac98d4897b7a49ce89972652242504&q='
 const DEFAULT_CITY = 'Almaty'
@@ -22,7 +26,7 @@ const getData = async(url) => {
     return data
 }
 // Функция для отображения данных с сервера на странице
-const displayData = (data) => {
+const displayNowTab = (data) => {
     
     //У меня есть несколько элементов на странице, где нужно отображать одно и тоже (название города, температуру и тд.). 
     //В переменную temp я сохранил все элементы, через которые нужно отображать температуру в виде nodeList. И далее 
@@ -50,23 +54,13 @@ const displayData = (data) => {
     humidity.innerHTML = `${data.current.humidity}`
 
     wind.innerHTML = `${data.current.wind_kph}`
-    
-    //Получаем дату запрашиваемого города
-    const localData = new Date(data.location.localtime)
-    
-    //Отрисовываем дату(число) и название месяца
-    day.forEach((el) => {
-        el.innerHTML = `${localData.getDate()} ${localData.toLocaleString('default', {month: 'long'})}`
-    })
-    
+
     currentCity = data.location.name
 }
 
 //При загрузке приложения, нужно отображать дефолтный город в приложении, что бы не было пусто
 //Запрос на сервер погоды, для получения дефолтного города, который мы вручную прописали в коде
-getData(`${API_KEY}${DEFAULT_CITY}`)
-    .then(data => displayData(data))
-    .catch(err => alert('Sorry, something went wrong. Please try again'))
+displayData(DEFAULT_CITY)
 
 // Подписываемся на форму в нашем приложении, что бы отправить запрос на сервер и получить данные по вписаному городу
 form.onsubmit = (event) => {
@@ -78,8 +72,6 @@ form.onsubmit = (event) => {
     let inputValue = input.value.trim()
     // Чистим поле ввода
     input.value = ''
-
-    getData(`${API_KEY}${inputValue}`)
-        .then(data => displayData(data))
-        .catch(err => alert('Sorry, something went wrong. Please try again'))
+    
+    displayData(inputValue)
 }
