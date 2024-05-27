@@ -28,7 +28,7 @@ const displayData = (data) => {
     //В переменную temp я сохранил все элементы, через которые нужно отображать температуру в виде nodeList. И далее 
     // прошелся с помощью forEach по этим элементам и отрисовал их
     temp.forEach((el) => {
-        el.innerHTML = `${data.current.temp_c}`
+        el.innerHTML = `${Math.floor(data.current.temp_c)}`
     })
 
     condition.forEach((el) => {
@@ -44,7 +44,7 @@ const displayData = (data) => {
     })
 
     feelsLike.forEach((el) => {
-        el.innerHTML = `${data.current.feelslike_c}`
+        el.innerHTML = `${Math.floor(data.current.feelslike_c)}`
     })
 
     humidity.innerHTML = `${data.current.humidity}`
