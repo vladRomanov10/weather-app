@@ -6,7 +6,7 @@ const displayData = (city, api = API_KEY) => {
             return data
         })
         .then(data => {
-            if (!isDevelopmentMode) {
+            if (!IS_DEVELOPMENT_MODE) {
                 displayForecastTab(data)
             }
         })

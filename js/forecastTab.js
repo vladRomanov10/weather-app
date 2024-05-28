@@ -1,6 +1,4 @@
-//Блок находится на стадии разработки
-const isDevelopmentMode = true
-
+//Данный блок в разработке
 const day = document.querySelectorAll('[data-id="day"]')
 const time = document.getElementById('time')
 
