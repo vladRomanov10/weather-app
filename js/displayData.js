@@ -5,10 +5,6 @@ const displayData = (city, api = API_KEY) => {
             displayNowDetailsTabs(data)
             return data
         })
-        .then(data => {
-            if (!IS_DEVELOPMENT_MODE) {
-                displayForecastTab(data)
-            }
-        })
+        .then(data => displayForecastTab(data))
         .catch(err => alert('Sorry, something went wrong. Please try again'))
 }
