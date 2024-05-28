@@ -1,7 +1,7 @@
 const citiesSelect = document.getElementById('selected-cities')
 const likeButton = document.getElementById('like-button')
 
-//В данную переменную записывается запрашиваемый город, при выполнении функции displayData
+//В данную переменную записывается запрашиваемый город, при выполнении функции displayNowTab
 let currentCity
 
 //Добавление города в список сохраненных городов
@@ -33,13 +33,9 @@ const displayCityFromList = () => {
 
     //Сохраняем в переменную значение активного option
     const selectedValue = event.target.value
-
-    getData(`${API_KEY}${selectedValue}`)
-        .then(data => displayData(data))
-        .catch(err => alert('Sorry, something went wrong. Please try again'))
+    
+    displayData(selectedValue)
 }
-
-
 // //Слушатель кнопки в избранное
 likeButton.addEventListener('click', clickHandler)
 
