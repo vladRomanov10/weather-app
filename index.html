@@ -25,7 +25,7 @@
                     <p class="tab-now__degree-symbol">°</p>
                 </div>
                 <p class="tab-now__condition" data-id="condition"></p>
-                <img class="tab-now__condition-icon" data-id="conditionIcon" src="" alt="">
+                <img class="tab-now__condition-icon" id="conditionIcon" src="" alt="">
                 <div class="tab-now__city-wrap">
                     <p class="tab-now__city" data-id="cityName"></p>
                     <button class="button" id="like-button"><img class="tab-now__add-city" src="assets/images/like.png" alt=""></button>
@@ -43,7 +43,7 @@
                 <div class="tab-details__flex-wrap">
                     <p>Feels like:</p>
                     <div class="flex-container">
-                        <p class="tab-details__feels-like" data-id="feelsLike"></p>
+                        <p class="tab-details__feels-like" id="feelsLike"></p>
                         <p class="tab-details__degree-symbol">°</p>
                     </div>
                 </div>
@@ -78,9 +78,9 @@
             <div class="locations__title">
                 Added Locations:
             </div>
-            <div class="locations__favourite-cities-wrap">
-                <select class="locations__favourite-cities transparent-border" size="9" id="selected-cities"></select>
-            </div>
+            <select class="locations__favourite-cities transparent-border" size="9" id="selected-cities"></select>
+<!--            -->
+<!--Кнопка удаления в разработке            <div class="locations__delete-button" id="deleteCity">delete city</div>-->
         </div>
     </div>
 </main>
@@ -95,5 +95,6 @@
 <script src="js/nowDetailsTabs.js"></script>
 <script src="js/savedLocations.js"></script>
 <script src="js/localStorage.js"></script>
+<script src="js/deleteCity.js"></script>
 </body>
 </html>

@@ -1,8 +1,8 @@
 const temp = document.querySelectorAll('[data-id="cityTemp"]')
 const condition = document.querySelectorAll('[data-id="condition"]')
 const city = document.querySelectorAll('[data-id="cityName"]')
-const conditionIcon = document.querySelectorAll('[data-id="conditionIcon"]')
-const feelsLike = document.querySelectorAll('[data-id="feelsLike"]')
+const conditionIcon = document.getElementById('conditionIcon')
+const feelsLike = document.getElementById('feelsLike')
 const humidity = document.getElementById('humidity')
 const wind = document.getElementById('wind')
 
@@ -24,19 +24,15 @@ const displayNowDetailsTabs = (data) => {
         el.innerHTML = `${data.location.name}`
     })
 
-    conditionIcon.forEach((el) => {
-        el.src = `https:${data.current.condition.icon}`
-    })
+    conditionIcon.src = `https:${data.current.condition.icon}`
 
-    feelsLike.forEach((el) => {
-        el.innerHTML = `${Math.floor(data.current.feelslike_c)}`
-    })
+    feelsLike.innerHTML = `${Math.floor(data.current.feelslike_c)}`
 
     humidity.innerHTML = `${data.current.humidity}`
 
     wind.innerHTML = `${data.current.wind_kph}`
 
-    currentCity = data.location.name
+    CURRENT_CITY = data.location.name
 }
 
 //При загрузке приложения, нужно отображать дефолтный город в приложении, что бы не было пусто
