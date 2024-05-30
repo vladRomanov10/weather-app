@@ -19,7 +19,7 @@
     </div>
     <div class="flex-container">
         <div class="widget transparent-right-border">
-            <div class="tab-now transparent-border hide">
+            <div class="tab-now transparent-border ">
                 <div class="flex-container">
                     <p class="tab-now__temperature" data-id="cityTemp"></p>
                     <p class="tab-now__degree-symbol">°</p>
@@ -31,7 +31,7 @@
                     <button class="button" id="like-button"><img class="tab-now__add-city" src="assets/images/like.png" alt=""></button>
                 </div>
             </div>
-            <div class="tab-details hide">
+            <div class="tab-details widget_hide">
                 <p class="tab-details__city" data-id="cityName"></p>
                 <div class="tab-details__flex-wrap">
                     <p class="tab-details__temperature">Temperature:</p>
@@ -62,15 +62,15 @@
                     <p class="tab-details__w-speed">km/h</p>
                 </div>
             </div>
-            <div class="tab-forecast">
+            <div class="tab-forecast widget_hide">
                 <p class="tab-forecast__city" data-id="cityName"></p>
                 <div class="tab-forecast__widgets-wrap" id="widgets"></div>
             </div>
 
             <ul class="tabs">
-                <li class="tabs__item widget__tabs_active transparent-left-border">Now</li>
-                <li class="tabs__item">Details</li>
-                <li class="tabs__item">Forecast</li>
+                <li class="tabs__item tabs_active transparent-left-border" id="tabNow">Now</li>
+                <li class="tabs__item" id="tabDetails">Details</li>
+                <li class="tabs__item" id="tabForecast">Forecast</li>
             </ul>
 
         </div>
@@ -85,9 +85,10 @@
     </div>
 </main>
 <script src="js/config.js"></script>
-<script src="js/clock.js"></script>
 <script src="js/deletionListeners.js"></script>
+<script src="js/clock.js"></script>
 <script src="js/searchForm.js"></script>
+<script src="js/tabs.js"></script>
 <script src="js/getData.js"></script>
 <script src="js/forecastTab.js"></script>
 <script src="js/displayData.js"></script>

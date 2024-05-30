@@ -108,7 +108,6 @@ html {
     border: 1px solid black;
 }
 
-
 .transparent-right-border {
     border-right: none;
 }
@@ -270,7 +269,7 @@ html {
     padding: 10px 0;
 }
 
-.widget__tabs_active {
+.tabs_active {
     color: white;
     background-color: black;
 }
@@ -312,6 +311,6 @@ html {
     border: none;
 }
 
-.hide {
+.widget_hide {
     display: none;
 }
