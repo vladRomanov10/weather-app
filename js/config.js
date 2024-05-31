@@ -2,6 +2,6 @@ const API_KEY = 'https://api.weatherapi.com/v1/forecast.json?key=ac98d4897b7a49c
 const DEFAULT_CITY = 'Almaty'
 
 //В данную переменную записывается город, который ввели в поисковой строке или выбрали в списке сохраненных
-let CURRENT_CITY
+let CURRENT_CITY = 'Almaty'
 
 const IS_DEVELOPMENT_MODE = true
