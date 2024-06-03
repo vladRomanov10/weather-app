@@ -316,6 +316,16 @@ html {
     font-size: 0.7em;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+
+.locations__delete-button:hover {
+    background-color: gray;
+}
+
+.locations__delete-button:active {
+    color: white;
+    background-color: black;
 }
 
 .transparent-border {
