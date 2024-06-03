@@ -4,4 +4,4 @@ const DEFAULT_CITY = 'Almaty'
 //В данную переменную записывается город, который ввели в поисковой строке или выбрали в списке сохраненных
 let CURRENT_CITY = 'Almaty'
 
-const IS_DEVELOPMENT_MODE = true
+const IS_DEVELOPMENT_MODE = false

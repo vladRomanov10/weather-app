@@ -1,12 +1,18 @@
-//Блок в стадии разработки
 const deleteCityButton = document.getElementById('deleteCity')
 
-if (IS_DEVELOPMENT_MODE) {
+const deleteClickHandler = () => {
 
-} else {
-    deleteCityButton.addEventListener('click', (event) => {
-        const elementToRemove = document.querySelector(`option[value=${CURRENT_CITY}]`)
-        elementToRemove.remove()
-        console.log(elementToRemove)
-    })
+    //Находим выбранный пользователем город из списка добавленных городов
+    const remoteElement = document.querySelector(`option[value=${CURRENT_CITY}]`)
+    
+    remoteElement.remove()
+    
+    //Обновляем список сохраненных городов и пушим его в localStorage
+    addedLocations = addedLocations.filter(el => el !== `${remoteElement.value}`)
+    
+    localStorage.setItem('addedLocations', JSON.stringify(addedLocations))
 }
+
+deleteCityButton.addEventListener('click', deleteClickHandler)
+
+
