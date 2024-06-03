@@ -299,8 +299,9 @@ html {
     font-size: 1.1em;
     font-family: inherit;
     width: 100%;
-    height: 458px;
+    height: 60%;
     padding: 10px 0 0 10px;
+    overflow-y: auto;
 }
 
 .locations__item-city {
