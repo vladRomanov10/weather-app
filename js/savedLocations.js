@@ -29,7 +29,6 @@ const clickHandler = () => addCity(CURRENT_CITY)
 const displayCityFromList = (event) => {
 
     //Сохраняем в переменную значение активного option
-    // const selectedValue = event.target.value
     CURRENT_CITY = event.target.value
     
     
