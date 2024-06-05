@@ -1,7 +1,10 @@
 const deleteCityButton = document.getElementById('deleteCity')
 
-const deleteClickHandler = () => {
-
+const deleteCityFromList = () => {
+    
+    //Делаем кнопку лайка прозрачной
+    favouriteCityIcon.src = favouriteCityTransparentIcon
+    
     //Находим выбранный пользователем город из списка добавленных городов
     const remoteElement = document.querySelector(`option[value=${CURRENT_CITY}]`)
     
@@ -13,6 +16,6 @@ const deleteClickHandler = () => {
     localStorage.setItem('addedLocations', JSON.stringify(addedLocations))
 }
 
-deleteCityButton.addEventListener('click', deleteClickHandler)
+deleteCityButton.addEventListener('click', deleteCityFromList)
 
 

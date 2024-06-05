@@ -1,8 +1,16 @@
-const citiesSelect = document.getElementById('selected-cities')
-const likeButton = document.getElementById('like-button')
+const selectedCities = document.getElementById('selected-cities')
 
 //Добавление города в список сохраненных городов
 const addCity = (city) => {
+
+    //Проверка на то, есть ли уже выбранный город в списке 
+    if (isCityInList()) {
+        deleteCityFromList()
+        return
+    }
+
+    //Смена иконки лайка
+    favouriteCityIcon.src = favouriteCityColorIcon
     
     // создаем новый элемент option
     const newOption = document.createElement('option')
@@ -13,13 +21,14 @@ const addCity = (city) => {
     newOption.className = 'locations__item-city'
 
     // добовляем в элемент select нового ребенка option со значением текущего города
-    citiesSelect.appendChild(newOption)
+    selectedCities.appendChild(newOption)
     
     //добавляем сохраненный город в массив, где хранятся сохраненные города
     addedLocations.push(city)
     
     //Сохраняем в localStorage массив городов
     localStorage.setItem('addedLocations', JSON.stringify(addedLocations))
+    
 }
 
 //оборачиваем функцию для добавления в обработчик событий
@@ -31,14 +40,13 @@ const displayCityFromList = (event) => {
     //Сохраняем в переменную значение активного option
     CURRENT_CITY = event.target.value
     
-    
     displayData(CURRENT_CITY)
 }
 // //Слушатель кнопки в избранное
-likeButton.addEventListener('click', clickHandler)
+favouriteCityButton.addEventListener('click', clickHandler)
 
 //Слушатель списка добавленных городов
-citiesSelect.addEventListener('change', displayCityFromList)
+selectedCities.addEventListener('change', displayCityFromList)
 
 //Удаление слушателей при неактивной вкладке
 delListeners()
