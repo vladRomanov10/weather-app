@@ -1,9 +1,6 @@
 const citiesSelect = document.getElementById('selected-cities')
 const likeButton = document.getElementById('like-button')
 
-//В данную переменную записывается запрашиваемый город, при выполнении функции displayData
-let currentCity
-
 //Добавление города в список сохраненных городов
 const addCity = (city) => {
     
@@ -26,20 +23,17 @@ const addCity = (city) => {
 }
 
 //оборачиваем функцию для добавления в обработчик событий
-const clickHandler = () => addCity(currentCity)
+const clickHandler = () => addCity(CURRENT_CITY)
 
 //отображение погоды города из списка сохранненых городов
-const displayCityFromList = () => {
+const displayCityFromList = (event) => {
 
     //Сохраняем в переменную значение активного option
-    const selectedValue = event.target.value
-
-    getData(`${API_KEY}${selectedValue}`)
-        .then(data => displayData(data))
-        .catch(err => alert('Sorry, something went wrong. Please try again'))
+    CURRENT_CITY = event.target.value
+    
+    
+    displayData(CURRENT_CITY)
 }
-
-
 // //Слушатель кнопки в избранное
 likeButton.addEventListener('click', clickHandler)
 
