@@ -27,7 +27,6 @@ const displayForecastTab = (data) => {
         
         //Час, на который отображается погода
         const currentHour = `${localHour + counter}:00`
-
         
         const widgetCard = `<div class="forecast-widget">
                         <div class="forecast-widget__date-time">
