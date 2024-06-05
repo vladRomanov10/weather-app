@@ -272,10 +272,19 @@ html {
     border-right: none;
     border-bottom: none;
     padding: 12px 0;
+    cursor: pointer;
+}
+
+.tabs__item:hover {
+    background-color: gray;
 }
 
 .tabs_active {
     color: white;
+    background-color: black;
+}
+
+.tabs_active:hover {
     background-color: black;
 }
 
