@@ -29,22 +29,24 @@ const displayForecastTab = (data) => {
         const currentHour = `${localHour + counter}:00`
         
         const widgetCard = `<div class="forecast-widget">
-                        <div class="forecast-widget__date-temp">
+                        <div class="forecast-widget__date-time">
                             <p class="forecast-widget__date">${localDayMonth}</p>
+                            <p class="forecast-widget__time">${currentHour}</p>
+                        </div>
+                        <div class="forecast-widget__temp-condition">
                             <div class="forecast-widget__flex-wrap">
                                 <p class="forecast-widget__temperature">Temperature:</p>
                                 <p class="forecast-widget__temperature">${hourWeatherTemp}</p>
                                 <p class="forecast-widget__degree-symbol">°</p>
                             </div>
+                            <p class="forecast-widget__condition">${hourWeather.condition.text}</p>
+                        </div>
+                        <div class="forecast-widget__feels-icon">
                             <div class="forecast-widget__flex-wrap">
-                                <p class="forecast-widget__feels-like" >Feels like:</p>
+                                <p class="forecast-widget__feels-like">Feels like:</p>
                                 <p class="forecast-widget__feels-like">${hourWeatherFeels}</p>
                                 <p class="forecast-widget__degree-symbol">°</p>
                             </div>
-                        </div>
-                        <div class="forecast-widget__time-cond">
-                            <p class="forecast-widget__time">${currentHour}</p>
-                            <p class="forecast-widget__condition">${hourWeather.condition.text}</p>
                             <img class="forecast-widget__icon" src="${hourWeather.condition.icon}" alt="Condition icon">
                         </div>
                     </div>`

@@ -186,14 +186,6 @@ html {
     margin-bottom: 15px;
 }
 
-.tab-details__percent {
-
-}
-
-.tab-details__w-speed {
-
-}
-
 .tab-forecast {
     max-height: 515px;
     max-width: 320px;
@@ -202,7 +194,7 @@ html {
 }
 
 .tab-forecast__city {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .tab-forecast__widgets-wrap {
@@ -212,17 +204,36 @@ html {
 }
 
 .forecast-widget {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px;
-    height: 125px;
     width: 280px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    font-size: 18px;
     border: 1px solid black;
-    font-size: 0.5em;
 }
 
-.forecast-widget__date-temp >:nth-child(2) {
-    margin-bottom: 16px;
+.forecast-widget__date-time {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+.forecast-widget__temp-condition {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecast-widget__condition {
+    text-align: end;
+    width: 50%;
+}
+
+.forecast-widget__feels-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .forecast-widget__flex-wrap {
@@ -230,31 +241,10 @@ html {
 }
 
 .forecast-widget__flex-wrap :first-child {
-    margin-right: 2px;
-}
-
-.forecast-widget__date {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.forecast-widget__time-cond {
-    display: flex;
-    flex-direction: column;
-    text-align: end;
-}
-
-.forecast-widget__time {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.forecast-widget__condition {
-    overflow-y: scroll;
+    margin-right: 4px;
 }
 
 .forecast-widget__icon {
-    margin-left: auto;
     width: 48px;
 }
 
