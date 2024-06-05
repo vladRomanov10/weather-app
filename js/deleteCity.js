@@ -6,13 +6,17 @@ const deleteCityFromList = () => {
     favouriteCityIcon.src = favouriteCityTransparentIcon
     
     //Находим выбранный пользователем город из списка добавленных городов
-    const remoteElement = document.querySelector(`option[value=${CURRENT_CITY}]`)
+    const remoteElement = document.querySelector(`option[value=${CURRENT_CITY_VALUE}]`)
     
+    if (!remoteElement) {
+        alert('There is no city list entry.')
+        return
+    }
     remoteElement.remove()
-    
+
     //Обновляем список сохраненных городов и пушим его в localStorage
-    addedLocations = addedLocations.filter(el => el !== `${remoteElement.value}`)
-    
+    addedLocations = addedLocations.filter(el => el !== `${remoteElement.textContent}`)
+
     localStorage.setItem('addedLocations', JSON.stringify(addedLocations))
 }
 
