@@ -13,4 +13,4 @@ const displayCityFromList = (event) => {
 }
 
 //Слушатель списка добавленных городов
-selectedCities.addEventListener('change', displayCityFromList)
+selectedCities.addEventListener('click', displayCityFromList)
