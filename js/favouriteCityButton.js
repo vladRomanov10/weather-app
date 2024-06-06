@@ -4,13 +4,13 @@ const favouriteCityTransparentIcon = 'assets/images/like.png'
 const favouriteCityColorIcon = 'assets/images/likeColor.png'
 
 //Функция, проверяющая, есть ли запрашиваемый город в списке сохраненных городов
-let isCityInList = () => addedLocations.includes(CURRENT_CITY)
+let isCityInList = (city) => addedLocations.includes(city)
 
 //Добавление города в список сохраненных городов по клику сердечка
 const addCity = (city) => {
-
+    
     //Проверка на то, есть ли выбранный город уже в списке 
-    if (isCityInList()) {
+    if (isCityInList(city)) {
         deleteCityFromList()
         return
     }
@@ -26,7 +26,7 @@ const addCity = (city) => {
     newOption.value = city.replaceAll(' ','')
     newOption.text = city
     newOption.className = 'locations__item-city'
-
+    
     CURRENT_CITY_VALUE = newOption.value
 
     // добовляем в элемент select нового ребенка option со значением текущего города
