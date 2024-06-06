@@ -35,7 +35,7 @@ const displayNowDetailsTabs = (data) => {
     CURRENT_CITY = data.location.name
     
     //Проверка на то, какую иконку лайка ставить. Если город уже есть в списке сохраненных, то закрашенный
-    if (isCityInList()) {
+    if (isCityInList(CURRENT_CITY)) {
         favouriteCityIcon.src = favouriteCityColorIcon
     } else {
         favouriteCityIcon.src = favouriteCityTransparentIcon
