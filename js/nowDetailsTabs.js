@@ -33,6 +33,13 @@ const displayNowDetailsTabs = (data) => {
     wind.innerHTML = `${data.current.wind_kph}`
 
     CURRENT_CITY = data.location.name
+    
+    //Проверка на то, какую иконку лайка ставить. Если город уже есть в списке сохраненных, то закрашенный
+    if (isCityInList(CURRENT_CITY)) {
+        favouriteCityIcon.src = favouriteCityColorIcon
+    } else {
+        favouriteCityIcon.src = favouriteCityTransparentIcon
+    }
 }
 
 //При загрузке приложения, нужно отображать дефолтный город в приложении, что бы не было пусто

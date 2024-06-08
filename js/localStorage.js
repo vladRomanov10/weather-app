@@ -5,11 +5,10 @@ let addedLocations = []
 const localStorageData = localStorage.getItem('addedLocations')
 
 //Преобразование строки в массив
-const addedLocationsArray = JSON.parse(localStorageData)
+const localStorageDataArray = JSON.parse(localStorageData)
 
-//Отрисовываем города из localStorage
-
-if (addedLocationsArray !== null) {
+//Добавляем города из localStorage в список сохраненных городов
+if (localStorageDataArray) {
     
-    addedLocationsArray.forEach(el => addCity(el))
+    localStorageDataArray.forEach(el => addCity(el))
 }
